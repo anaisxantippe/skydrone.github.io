@@ -19,21 +19,21 @@ class Opinion
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $opinionId;
+    public $opinionId;
 
     /**
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=50, nullable=false)
      */
-    private $title;
+    public $title;
 
     /**
      * @var string
      *
      * @ORM\Column(name="description", type="text", length=65535, nullable=false)
      */
-    private $description;
+    public $description;
 
     /**
      * @var \Product
@@ -43,7 +43,7 @@ class Opinion
      *   @ORM\JoinColumn(name="product_id", referencedColumnName="product_id")
      * })
      */
-    private $product;
+    public $product;
 
     /**
      * @var \Customers
@@ -53,7 +53,7 @@ class Opinion
      *   @ORM\JoinColumn(name="customer_id", referencedColumnName="customer_id")
      * })
      */
-    private $customer;
+    public $customer;
 
 
 }
