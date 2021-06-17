@@ -31,6 +31,7 @@ class Orders
 
 
     /**
+
      * @var \DateTime
      *
      * @ORM\Column(name="order_date", type="date", nullable=false)
@@ -119,6 +120,7 @@ class Orders
         $this->quantity = $quantity;
         return $this;
     }
+
     /**
      * @var bool
      *
@@ -150,6 +152,7 @@ class Orders
      */
 
 
+
     private $discount;
 
     /**
@@ -168,6 +171,9 @@ class Orders
         return $this;
     }
     /**
+    private $discount;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="total", type="integer", nullable=false)
@@ -185,6 +191,7 @@ class Orders
         $this->total = $total;
         return $this;
     }
+
     /**
      * @var \Customers
      *
@@ -194,6 +201,7 @@ class Orders
      * })
      */
     private $customer;
+
 
     public
     function getCustomer(): ?string
@@ -207,7 +215,6 @@ class Orders
         $this->customer = $customer;
         return $this;
     }
-
     /**
      * @var \Product
      *
@@ -217,6 +224,7 @@ class Orders
      * })
      */
     private $product;
+
 
     public
     function getProduct(): ?string

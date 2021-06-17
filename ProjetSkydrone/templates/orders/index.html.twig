@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Orders index{% endblock %}
+
+{% block body %}
+    <h1>Orders index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>OrderId</th>
+                <th>OrderDate</th>
+                <th>DelayedPayment</th>
+                <th>DfTotal</th>
+                <th>Quantity</th>
+                <th>Payed</th>
+                <th>Discount</th>
+                <th>Total</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for order in orders %}
+            <tr>
+                <td>{{ order.orderId }}</td>
+                <td>{{ order.orderDate ? order.orderDate|date('Y-m-d') : '' }}</td>
+                <td>{{ order.delayedPayment ? 'Yes' : 'No' }}</td>
+                <td>{{ order.dfTotal }}</td>
+                <td>{{ order.quantity }}</td>
+                <td>{{ order.payed ? 'Yes' : 'No' }}</td>
+                <td>{{ order.discount }}</td>
+                <td>{{ order.total }}</td>
+                <td>
+                    <a href="{{ path('orders_show', {'orderId': order.orderId}) }}">show</a>
+                    <a href="{{ path('orders_edit', {'orderId': order.orderId}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('orders_new') }}">Create new</a>
+{% endblock %}
