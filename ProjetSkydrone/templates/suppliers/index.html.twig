@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Suppliers index{% endblock %}
+
+{% block body %}
+    <h1>Suppliers index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>SuppliersId</th>
+                <th>CompanyName</th>
+                <th>Mail</th>
+                <th>PhoneNumber</th>
+                <th>Adress</th>
+                <th>ZipCode</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Siret</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for supplier in suppliers %}
+            <tr>
+                <td>{{ supplier.suppliersId }}</td>
+                <td>{{ supplier.companyName }}</td>
+                <td>{{ supplier.mail }}</td>
+                <td>{{ supplier.phoneNumber }}</td>
+                <td>{{ supplier.adress }}</td>
+                <td>{{ supplier.zipCode }}</td>
+                <td>{{ supplier.city }}</td>
+                <td>{{ supplier.country }}</td>
+                <td>{{ supplier.siret }}</td>
+                <td>
+                    <a href="{{ path('suppliers_show', {'suppliersId': supplier.suppliersId}) }}">show</a>
+                    <a href="{{ path('suppliers_edit', {'suppliersId': supplier.suppliersId}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('suppliers_new') }}">Create new</a>
+{% endblock %}

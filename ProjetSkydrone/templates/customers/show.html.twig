@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Customers{% endblock %}
+
+{% block body %}
+    <h1>Customers</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>CustomerId</th>
+                <td>{{ customer.customerId }}</td>
+            </tr>
+            <tr>
+                <th>Role</th>
+                <td>{{ customer.role }}</td>
+            </tr>
+            <tr>
+                <th>Company</th>
+                <td>{{ customer.company }}</td>
+            </tr>
+            <tr>
+                <th>Lastname</th>
+                <td>{{ customer.lastname }}</td>
+            </tr>
+            <tr>
+                <th>Firstname</th>
+                <td>{{ customer.firstname }}</td>
+            </tr>
+            <tr>
+                <th>DeliveryAdress</th>
+                <td>{{ customer.deliveryAdress }}</td>
+            </tr>
+            <tr>
+                <th>DeliveryZip</th>
+                <td>{{ customer.deliveryZip }}</td>
+            </tr>
+            <tr>
+                <th>DeliveryCity</th>
+                <td>{{ customer.deliveryCity }}</td>
+            </tr>
+            <tr>
+                <th>DeliveryCountry</th>
+                <td>{{ customer.deliveryCountry }}</td>
+            </tr>
+            <tr>
+                <th>BillingAdress</th>
+                <td>{{ customer.billingAdress }}</td>
+            </tr>
+            <tr>
+                <th>BillingCity</th>
+                <td>{{ customer.billingCity }}</td>
+            </tr>
+            <tr>
+                <th>BillingZip</th>
+                <td>{{ customer.billingZip }}</td>
+            </tr>
+            <tr>
+                <th>BillingCountry</th>
+                <td>{{ customer.billingCountry }}</td>
+            </tr>
+            <tr>
+                <th>Vat</th>
+                <td>{{ customer.vat }}</td>
+            </tr>
+            <tr>
+                <th>PhoneNumber</th>
+                <td>{{ customer.phoneNumber }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('customers_index') }}">back to list</a>
+
+    <a href="{{ path('customers_edit', {'customerId': customer.customerId}) }}">edit</a>
+
+    {{ include('customers/_delete_form.html.twig') }}
+{% endblock %}

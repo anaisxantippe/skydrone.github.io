@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Customers index{% endblock %}
+
+{% block body %}
+    <h1>Customers index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>CustomerId</th>
+                <th>Role</th>
+                <th>Company</th>
+                <th>Lastname</th>
+                <th>Firstname</th>
+                <th>DeliveryAdress</th>
+                <th>DeliveryZip</th>
+                <th>DeliveryCity</th>
+                <th>DeliveryCountry</th>
+                <th>BillingAdress</th>
+                <th>BillingCity</th>
+                <th>BillingZip</th>
+                <th>BillingCountry</th>
+                <th>Vat</th>
+                <th>PhoneNumber</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for customer in customers %}
+            <tr>
+                <td>{{ customer.customerId }}</td>
+                <td>{{ customer.role }}</td>
+                <td>{{ customer.company }}</td>
+                <td>{{ customer.lastname }}</td>
+                <td>{{ customer.firstname }}</td>
+                <td>{{ customer.deliveryAdress }}</td>
+                <td>{{ customer.deliveryZip }}</td>
+                <td>{{ customer.deliveryCity }}</td>
+                <td>{{ customer.deliveryCountry }}</td>
+                <td>{{ customer.billingAdress }}</td>
+                <td>{{ customer.billingCity }}</td>
+                <td>{{ customer.billingZip }}</td>
+                <td>{{ customer.billingCountry }}</td>
+                <td>{{ customer.vat }}</td>
+                <td>{{ customer.phoneNumber }}</td>
+                <td>
+                    <a href="{{ path('customers_show', {'customerId': customer.customerId}) }}">show</a>
+                    <a href="{{ path('customers_edit', {'customerId': customer.customerId}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="16">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('customers_new') }}">Create new</a>
+{% endblock %}

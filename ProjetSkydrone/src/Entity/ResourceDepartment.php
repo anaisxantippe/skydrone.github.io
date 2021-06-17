@@ -21,6 +21,16 @@ class ResourceDepartment
      */
     private $rdId;
 
+
+    /**
+     * @return mixed
+     */
+    public function getrdId(): ?int
+    {
+        return $this->rdId;
+    }
+
+
     /**
      * @var string
      *
