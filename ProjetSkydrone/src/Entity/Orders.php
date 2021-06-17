@@ -22,11 +22,36 @@ class Orders
     private $orderId;
 
     /**
+     * @return mixed
+     */
+    public function getId(): ?int
+    {
+        return $this->orderId;
+    }
+
+
+    /**
+
      * @var \DateTime
      *
      * @ORM\Column(name="order_date", type="date", nullable=false)
      */
     private $orderDate;
+    /**
+     * @return mixed
+     */
+    public
+    function getorderDate(): ?date
+    {
+        return $this->orderDate;
+    }
+
+    public
+    function setorderDate (date $orderDate): self
+    {
+        $this->orderDate = $orderDate;
+        return $this;
+    }
 
     /**
      * @var bool
@@ -36,6 +61,22 @@ class Orders
     private $delayedPayment;
 
     /**
+     * @return mixed
+     */
+    public
+    function getDelayedPayment(): ?bool
+    {
+        return $this->delayedPayment;
+    }
+
+    public
+    function setdelayedPayment(bool $delayedPayment): self
+    {
+        $this->delayedPayment = $delayedPayment;
+        return $this;
+    }
+
+    /**
      * @var int
      *
      * @ORM\Column(name="df_total", type="integer", nullable=false)
@@ -43,11 +84,42 @@ class Orders
     private $dfTotal;
 
     /**
+     * @return mixed
+     */
+    public
+    function getDfTotal(): ?int
+    {
+        return $this->dfTotal;
+    }
+
+    public
+    function setDftotal(int $dftotal): self
+    {
+        $this->dfTotal = $dftotal;
+        return $this;
+    }
+
+    /**
      * @var int
      *
      * @ORM\Column(name="quantity", type="integer", nullable=false)
      */
     private $quantity;
+    /**
+     * @return mixed
+     */
+    public
+    function getQuantity(): ?int
+    {
+        return $this->quantity;
+    }
+
+    public
+    function setQuantity(string $quantity): self
+    {
+        $this->quantity = $quantity;
+        return $this;
+    }
 
     /**
      * @var bool
@@ -57,10 +129,48 @@ class Orders
     private $payed;
 
     /**
+     * @return mixed
+     */
+    public
+    function getPayed(): ?bool
+    {
+        return $this->payed;
+    }
+
+    public
+    function setPayed(bool $payed): self
+    {
+        $this->payed = $payed;
+        return $this;
+    }
+
+
+    /**
      * @var int|null
      *
      * @ORM\Column(name="discount", type="integer", nullable=true)
      */
+
+
+
+    private $discount;
+
+    /**
+     * @return int|null
+     */
+    public
+    function getDiscount(): ?int
+    {
+        return $this->discount;
+    }
+
+    public
+    function setDiscount(int $discount): self
+    {
+        $this->discount = $discount;
+        return $this;
+    }
+    /**
     private $discount;
 
     /**
@@ -69,6 +179,18 @@ class Orders
      * @ORM\Column(name="total", type="integer", nullable=false)
      */
     private $total;
+    public
+    function getTotal(): ?int
+    {
+        return $this->total;
+    }
+
+    public
+    function setTotal(int $total): self
+    {
+        $this->total = $total;
+        return $this;
+    }
 
     /**
      * @var \Customers
@@ -80,6 +202,19 @@ class Orders
      */
     private $customer;
 
+
+    public
+    function getCustomer(): ?string
+    {
+        return $this->customer;
+    }
+
+    public
+    function setCustomer(string $customer): self
+    {
+        $this->customer = $customer;
+        return $this;
+    }
     /**
      * @var \Product
      *
@@ -89,6 +224,20 @@ class Orders
      * })
      */
     private $product;
+
+
+    public
+    function getProduct(): ?string
+    {
+        return $this->product;
+    }
+
+    public
+    function setProduct(string $product): self
+    {
+        $this->product = $product;
+        return $this;
+    }
 
 
 }
