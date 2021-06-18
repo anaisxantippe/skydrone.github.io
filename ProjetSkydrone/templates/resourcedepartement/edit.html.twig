@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit ResourceDepartment{% endblock %}
+{% block title %}Edition des informations {% endblock %}
 
 {% block body %}
-    <h1>Edit ResourceDepartment</h1>
+    <h1>Editer les informations </h1>
 
     {{ include('resourcedepartement/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('resourcedepartement_index') }}">back to list</a>
+    <a href="{{ path('resourcedepartement_index') }}">Retour à la liste</a>
 
     {{ include('resourcedepartement/_delete_form.html.twig') }}
 {% endblock %}

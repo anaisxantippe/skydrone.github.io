@@ -50,4 +50,8 @@ class Users
     private $mail;
 
 
+    public function __toString()
+    {
+        return $this->username;
+    }
 }

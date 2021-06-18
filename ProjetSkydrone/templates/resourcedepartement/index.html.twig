@@ -1,22 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}ResourceDepartment index{% endblock %}
+{% block title %}Employés du services des ressources{% endblock %}
 
 {% block body %}
-    <h1>ResourceDepartment index</h1>
+    <h1>Index des employés du services de ressources</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>RdId</th>
-                <th>Lastname</th>
-                <th>Firstname</th>
-                <th>Adress</th>
-                <th>ZipCode</th>
-                <th>City</th>
-                <th>Birthdate</th>
-                <th>PhoneNumber</th>
-                <th>actions</th>
+                <th>Identifiant de l'employé</th>
+                <th>Nom de famille</th>
+                <th>Prénom</th>
+                <th>Adresse</th>
+                <th>Code postal</th>
+                <th>Ville</th>
+                <th>Date de naissance </th>
+                <th>Numéro de téléphone</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -31,8 +31,8 @@
                 <td>{{ resource_department.birthdate ? resource_department.birthdate|date('Y-m-d') : '' }}</td>
                 <td>{{ resource_department.phoneNumber }}</td>
                 <td>
-                    <a href="{{ path('resourcedepartement_show', {'rdId': resource_department.rdId}) }}">show</a>
-                    <a href="{{ path('resourcedepartement_edit', {'rdId': resource_department.rdId}) }}">edit</a>
+                    <a href="{{ path('resourcedepartement_show', {'rdId': resource_department.rdId}) }}">Montrer les détails </a>
+                    <a href="{{ path('resourcedepartement_edit', {'rdId': resource_department.rdId}) }}">Editer </a>
                 </td>
             </tr>
         {% else %}
@@ -43,5 +43,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('resourcedepartement_new') }}">Create new</a>
+    <a href="{{ path('resourcedepartement_new') }}">Enregistrer un nouvel employé pour ce service</a>
 {% endblock %}
