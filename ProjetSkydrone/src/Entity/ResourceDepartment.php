@@ -210,12 +210,18 @@ class ResourceDepartment
      */
 
     /**
-     * @param \Users $user
+     * @param Users|null $user
+     * @return ResourceDepartment
      */
-    public function setUser(\Users $user): self
+    public function setUser(?Users $user): self
     {
         $this->user = $user;
         return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->lastname;
     }
 
 

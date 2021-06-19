@@ -41,7 +41,7 @@ class Suppliers
     /**
      * @return string
      */
-    public function getCompanyName(): string
+    public function getCompanyName(): ?string
     {
         return $this->companyName;
     }
@@ -64,7 +64,7 @@ class Suppliers
     /**
      * @return string
      */
-    public function getMail(): string
+    public function getMail(): ?string
     {
         return $this->mail;
     }
@@ -87,7 +87,7 @@ class Suppliers
     /**
      * @return string
      */
-    public function getPhoneNumber(): string
+    public function getPhoneNumber(): ?string
     {
         return $this->phoneNumber;
     }
@@ -95,7 +95,7 @@ class Suppliers
     /**
      * @param string $phoneNumber
      */
-    public function setPhoneNumber(string $phoneNumber): void
+    public function setPhoneNumber(string $phoneNumber): self
     {
         $this->phoneNumber = $phoneNumber;
     }
@@ -110,7 +110,7 @@ class Suppliers
     /**
      * @return string
      */
-    public function getAdress(): string
+    public function getAdress(): ?string
     {
         return $this->adress;
     }
@@ -118,7 +118,7 @@ class Suppliers
     /**
      * @param string $adress
      */
-    public function setAdress(string $adress): void
+    public function setAdress(string $adress): self
     {
         $this->adress = $adress;
     }
@@ -133,7 +133,7 @@ class Suppliers
     /**
      * @return string
      */
-    public function getZipCode(): string
+    public function getZipCode(): ?string
     {
         return $this->zipCode;
     }
@@ -141,7 +141,7 @@ class Suppliers
     /**
      * @param string $zipCode
      */
-    public function setZipCode(string $zipCode): void
+    public function setZipCode(string $zipCode): self
     {
         $this->zipCode = $zipCode;
     }
@@ -156,7 +156,7 @@ class Suppliers
     /**
      * @return string
      */
-    public function getCity(): string
+    public function getCity(): ?string
     {
         return $this->city;
     }
@@ -164,7 +164,7 @@ class Suppliers
     /**
      * @param string $city
      */
-    public function setCity(string $city): void
+    public function setCity(string $city): self
     {
         $this->city = $city;
     }
@@ -187,7 +187,7 @@ class Suppliers
     /**
      * @param string|null $country
      */
-    public function setCountry(?string $country): void
+    public function setCountry(?string $country): self
     {
         $this->country = $country;
     }
@@ -202,7 +202,7 @@ class Suppliers
     /**
      * @return string
      */
-    public function getSiret(): string
+    public function getSiret(): ?string
     {
         return $this->siret;
     }
@@ -210,7 +210,7 @@ class Suppliers
     /**
      * @param string $siret
      */
-    public function setSiret(string $siret): void
+    public function setSiret(string $siret): self
     {
         $this->siret = $siret;
     }
@@ -226,17 +226,17 @@ class Suppliers
     private $rd;
 
     /**
-     * @return \ResourceDepartment
+     * @return ResourceDepartment|null
      */
-    public function getRd(): \ResourceDepartment
+    public function getRd(): ?ResourceDepartment
     {
         return $this->rd;
     }
 
     /**
-     * @param \ResourceDepartment $rd
+     * @param ResourceDepartment|null $rd
      */
-    public function setRd(\ResourceDepartment $rd): void
+    public function setRd(?ResourceDepartment $rd): self
     {
         $this->rd = $rd;
     }
