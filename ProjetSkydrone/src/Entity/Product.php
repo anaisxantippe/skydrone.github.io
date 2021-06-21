@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Product
  *
- * @ORM\Table(name="product", indexes={@ORM\Index(name="suppliers_id", columns={"suppliers_id"})})
+ * @ORM\Table(name="Product", indexes={@ORM\Index(name="suppliers_id", columns={"suppliers_id"})})
  * @ORM\Entity
  */
 class Product
@@ -154,5 +154,6 @@ class Product
 
         return $this;
     }
+
 
 }

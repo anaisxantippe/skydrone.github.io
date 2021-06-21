@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * DeliveryForm
  *
- * @ORM\Table(name="delivery_form", indexes={@ORM\Index(name="order_id", columns={"order_id"})})
+ * @ORM\Table(name="Delivery_form", indexes={@ORM\Index(name="order_id", columns={"order_id"})})
  * @ORM\Entity
  */
 class DeliveryForm

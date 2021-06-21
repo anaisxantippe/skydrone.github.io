@@ -131,6 +131,7 @@
       <path value="$PROJECT_DIR$/ProjetSkydrone/vendor/symfony/twig-bundle" />
       <path value="$PROJECT_DIR$/ProjetSkydrone/vendor/symfony/phpunit-bridge" />
       <path value="$PROJECT_DIR$/ProjetSkydrone/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/ProjetSkydrone/vendor/symfony/web-server-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

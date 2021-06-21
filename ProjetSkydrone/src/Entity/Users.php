@@ -3,14 +3,17 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * Users
  *
- * @ORM\Table(name="users")
+ * @ORM\Table(name="Users")
  * @ORM\Entity
  */
-class Users
+class Users implements UserInterface
 {
     /**
      * @var int
@@ -21,10 +24,17 @@ class Users
      */
     private $userId;
 
+
     /**
      * @var string
      *
      * @ORM\Column(name="role", type="string", length=50, nullable=false)
+     * @Assert\NotBlank
+     * @Assert\Length(min=10, max=60, minMessage="Format de role invalide")
+     * @Assert\Regex(
+     *     pattern     = "/^[a-z]+$/i",
+     *     htmlPattern = "[a-zA-Z]+"
+     * )
      */
     private $role;
 
@@ -32,13 +42,31 @@ class Users
      * @var string
      *
      * @ORM\Column(name="pass", type="string", length=200, nullable=false)
+     * @Assert\NotBlank
+     * @Assert\Length(min=6, max=20, minMessage="Doit faire entre 8 et 15 caractères, avec majuscule, minuscule, chiffre et caractère spécial")
+     * @Assert\Regex (
+     *     pattern      ="/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})$/",
+     *     htmlPattern  ="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})"
+     *)
      */
-    private $pass;
+    private $password;
+
+    /**
+     * @Assert\EqualTo (propertyPath="password", message="Votre mot de passe doit être identique")
+     *
+     */
+    public $confirm_pass;
 
     /**
      * @var string
      *
      * @ORM\Column(name="username", type="string", length=50, nullable=false)
+     * @Assert\NotBlank
+     * @Assert\Length(min=5, max=60, minMessage="Format d'identifiant invalide")
+     * @Assert\Regex(
+     *     pattern     = "/^[a-zA-Z0-9]+$/",
+     *     htmlPattern = "[a-zA-Z0-9]+"
+     * )
      */
     private $username;
 
@@ -46,6 +74,12 @@ class Users
      * @var string
      *
      * @ORM\Column(name="mail", type="string", length=50, nullable=false)
+     * @Assert\NotBlank
+     *@Assert\Regex(
+     *     pattern     = "/^([\w\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})/i",
+     *     htmlPattern = "([\w\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})"
+     * )
+     *
      */
     private $mail;
 
@@ -66,6 +100,24 @@ class Users
         return $this;
     }
 
+
+    public function getPassword(): ?string
+    {
+        return $this->password;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getConfirmPass()
+    {
+        return $this->confirm_pass;
+    }
+
+    public function setPassword(string $password): self
+    {
+        $this->password= $password;
+
     public function getPass(): ?string
     {
         return $this->pass;
@@ -77,6 +129,7 @@ class Users
 
         return $this;
     }
+
 
     public function getUsername(): ?string
     {
@@ -102,5 +155,18 @@ class Users
         return $this;
     }
 
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
+    }
+
+    public function getSalt()
+    {
+        // TODO: Implement getSalt() method.
+    }
+    public function getRoles()
+    {
+        // TODO: Implement getRoles() method.
+    }
 
 }
