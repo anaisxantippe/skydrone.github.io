@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Employés du services des ressources{% endblock %}
+
+{% block body %}
+    <h1>Index des employés du services de ressources</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Identifiant de l'employé</th>
+                <th>Nom de famille</th>
+                <th>Prénom</th>
+                <th>Adresse</th>
+                <th>Code postal</th>
+                <th>Ville</th>
+                <th>Date de naissance </th>
+                <th>Numéro de téléphone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for resource_department in resource_departments %}
+            <tr>
+                <td>{{ resource_department.rdId }}</td>
+                <td>{{ resource_department.lastname }}</td>
+                <td>{{ resource_department.firstname }}</td>
+                <td>{{ resource_department.adress }}</td>
+                <td>{{ resource_department.zipCode }}</td>
+                <td>{{ resource_department.city }}</td>
+                <td>{{ resource_department.birthdate ? resource_department.birthdate|date('Y-m-d') : '' }}</td>
+                <td>{{ resource_department.phoneNumber }}</td>
+                <td>
+                    <a href="{{ path('resourcedepartement_show', {'rdId': resource_department.rdId}) }}">Montrer les détails </a>
+                    <a href="{{ path('resourcedepartement_edit', {'rdId': resource_department.rdId}) }}">Editer </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('resourcedepartement_new') }}">Enregistrer un nouvel employé pour ce service</a>
+{% endblock %}

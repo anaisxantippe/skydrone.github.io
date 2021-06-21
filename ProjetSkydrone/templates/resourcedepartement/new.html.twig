@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvel employé {% endblock %}
+
+{% block body %}
+    <h1>Enregistrer un nouvel employé </h1>
+
+    {{ include('resourcedepartement/_form.html.twig') }}
+
+    <a href="{{ path('resourcedepartement_index') }}">Retour à la liste </a>
+{% endblock %}

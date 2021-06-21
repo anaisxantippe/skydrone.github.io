@@ -2,7 +2,10 @@
 
 namespace App\Entity;
 
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Validator\Constraints\Date;
 
 /**
  * Orders
@@ -35,6 +38,13 @@ class Orders
      */
     private $delayedPayment;
 
+
+     * @var DateTime
+     *
+     * @ORM\Column(name="order_date", type="date", nullable=false)
+     * @Assert\NotBlank(
+     *     message="Veuillez renseigner une date"
+     * )
     /**
      * @var int
      *
@@ -48,12 +58,28 @@ class Orders
      * @ORM\Column(name="quantity", type="integer", nullable=false)
      */
 
+    public
+    function getorderDate(): ?datetime
+    {
+        return $this->orderDate;
+    }
+
+    public
+    function setorderDate (datetime $orderDate): self
+    {
+        $this->orderDate = $orderDate;
+        return $this;
+    }
+
+
     private $orderDate;
+
 
     /**
      * @var bool
      *
      * @ORM\Column(name="delayed_payment", type="boolean", nullable=false)
+     *
      */
     private $delayedPayment;
 
@@ -67,6 +93,15 @@ class Orders
     /**
      * @var int
      *
+
+     * @ORM\Column(name="df_total", type="integer", nullable=false)
+     * @Assert\NotBlank(
+     *     message="Veuillez entrer un total hors taxe "
+     * )
+     * @Assert\Regex(
+     *     pattern="^\d+(,\d{3})*(\.\d{1,2})?$",
+     *     message="Caratère(s) non valide(s)"
+     * )
      * @ORM\Column(name="quantity", type="integer", nullable=false)
      */
     private $quantity;
@@ -88,6 +123,15 @@ class Orders
     /**
      * @var int
      *
+
+     * @ORM\Column(name="quantity", type="integer", nullable=false)
+     * @Assert\NotBlank (
+     *     message="Veuillez entrer une quantité "
+     * )
+     * @Assert\Regex (
+     *     pattern="^0$|^[1-9][0-9]*$",
+     *     message="Caratère(s) non valide(s)"
+     * )
      * @ORM\Column(name="total", type="integer", nullable=false)
      */
     private $total;
@@ -177,6 +221,15 @@ class Orders
         return $this->delayedPayment;
     }
 
+    /**
+     * @var int|null
+     *
+     * @ORM\Column(name="discount", type="integer", nullable=true)
+     * @Assert\Regex(
+     *     pattern="^\d+(,\d{3})*(\.\d{1,2})?$",
+     *     message="Caratère(s) non valide(s)"
+     * )
+     */
     public function setDelayedPayment(bool $delayedPayment): self
     {
         $this->delayedPayment = $delayedPayment;
@@ -232,7 +285,26 @@ class Orders
         return $this;
     }
 
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="total", type="integer", nullable=false)
+     * @Assert\NotBlank (
+     *     message="Veuillez entrer un total TTC"
+     * )
+     * @Assert\Regex(
+     *     pattern="^\d+(,\d{3})*(\.\d{1,2})?$",
+     *     message="Caratère(s) non valide(s)"
+     * )
+     */
+    private $total;
+    public
+    function getTotal(): ?int
+
+
     public function getTotal(): ?int
+
     {
         return $this->total;
     }
@@ -243,6 +315,24 @@ class Orders
 
         return $this;
     }
+
+
+    /**
+     * @var \Customers
+     *
+     * @ORM\ManyToOne(targetEntity="Customers")
+     * @Assert\NotBlank(
+     *     message="Veuillez choisir un client  "
+     * )
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="customer_id", referencedColumnName="customer_id")
+     * })
+     */
+    private $customer;
+
+
+    public
+    function getCustomer(): ?string
 
     public function getCustomer(): ?Customers
     {
@@ -255,6 +345,18 @@ class Orders
 
         return $this;
     }
+    /**
+     * @var \Product
+     *
+     * @ORM\ManyToOne(targetEntity="Product")
+     *  @Assert\NotBlank(
+     *     message="Veuillez choisir un produit "
+     * )
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="product_id", referencedColumnName="product_id")
+     * })
+     */
+    private $product;
 
     public function getProduct(): ?Product
     {

@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ResourceDepartment{% endblock %}
+
+{% block body %}
+    <h1>Employé du service des ressources </h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Identifiant de l'employé </th>
+                <td>{{ resource_department.rdId }}</td>
+            </tr>
+            <tr>
+                <th>Nom </th>
+                <td>{{ resource_department.lastname }}</td>
+            </tr>
+            <tr>
+                <th>Prénom</th>
+                <td>{{ resource_department.firstname }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ resource_department.adress }}</td>
+            </tr>
+            <tr>
+                <th>Code postal</th>
+                <td>{{ resource_department.zipCode }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ resource_department.city }}</td>
+            </tr>
+            <tr>
+                <th>Date de naissance </th>
+                <td>{{ resource_department.birthdate ? resource_department.birthdate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Numéro de téléphone </th>
+                <td>{{ resource_department.phoneNumber }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('resourcedepartement_index') }}">Retour à la liste </a>
+
+    <a href="{{ path('resourcedepartement_edit', {'rdId': resource_department.rdId}) }}">Editer </a>
+
+    {{ include('resourcedepartement/_delete_form.html.twig') }}
+{% endblock %}
