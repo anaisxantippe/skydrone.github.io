@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SalesDepartment index{% endblock %}
+
+{% block body %}
+    <h1>SalesDepartment index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>SdId</th>
+                <th>Lastname</th>
+                <th>Firstname</th>
+                <th>Adress</th>
+                <th>ZipCode</th>
+                <th>City</th>
+                <th>Birthdate</th>
+                <th>PhoneNumber</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sales_department in sales_departments %}
+            <tr>
+                <td>{{ sales_department.sdId }}</td>
+                <td>{{ sales_department.lastname }}</td>
+                <td>{{ sales_department.firstname }}</td>
+                <td>{{ sales_department.adress }}</td>
+                <td>{{ sales_department.zipCode }}</td>
+                <td>{{ sales_department.city }}</td>
+                <td>{{ sales_department.birthdate ? sales_department.birthdate|date('Y-m-d') : '' }}</td>
+                <td>{{ sales_department.phoneNumber }}</td>
+                <td>
+                    <a href="{{ path('sales_department_show', {'sdId': sales_department.sdId}) }}">show</a>
+                    <a href="{{ path('sales_department_edit', {'sdId': sales_department.sdId}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('sales_department_new') }}">Create new</a>
+{% endblock %}

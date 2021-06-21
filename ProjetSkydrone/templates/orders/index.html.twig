@@ -3,19 +3,19 @@
 {% block title %}Orders index{% endblock %}
 
 {% block body %}
-    <h1>Orders index</h1>
+    <h1>Index de commande</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>OrderId</th>
-                <th>OrderDate</th>
-                <th>DelayedPayment</th>
-                <th>DfTotal</th>
-                <th>Quantity</th>
-                <th>Payed</th>
-                <th>Discount</th>
-                <th>Total</th>
+                <th>Identifiant de la commande </th>
+                <th>Date de la commande </th>
+                <th>Payement Différé? </th>
+                <th>Total Hors-taxe </th>
+                <th>Quantité</th>
+                <th>Payé? </th>
+                <th>Remise </th>
+                <th>Total toutes taxes</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -37,11 +37,11 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="9">no records found</td>
+                <td colspan="9">Pas de commande trouvé ! </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('orders_new') }}">Create new</a>
+    <a href="{{ path('orders_new') }}">Nouvelle Commande </a>
 {% endblock %}
