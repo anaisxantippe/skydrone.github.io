@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3d7a4672-df21-44a7-893f-02efb8bcc422" name="Default Changelist" comment="changements formulaires">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Controller/UsersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Form/UsersType.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Form/UsersType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/users/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/users/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/users/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/users/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/users/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/users/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/users/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/users/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
