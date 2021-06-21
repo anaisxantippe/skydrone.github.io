@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Validator\Constraints\Length;
 
 /**
  * Users
@@ -10,7 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="users")
  * @ORM\Entity
  */
-class Users
+class Users implements \Symfony\Component\Security\Core\User\UserInterface
 {
     /**
      * @var int
@@ -51,20 +53,23 @@ class Users
         return $this->role;
     }
 
-
     /**
      * @param string $role
+     * @return Users
      */
     public function setRole(string $role): self
     {
         $this->role = $role;
+        return $this;
     }
 
     /**
      * @var string
      *
      * @ORM\Column(name="pass", type="string", length=200, nullable=false)
+     * @Assert\Length(min="8",minMessage="Votre message doit faire au moins 8 caractères!")
      */
+
     private $pass;
 
     /**
@@ -77,11 +82,18 @@ class Users
 
     /**
      * @param string $pass
+     * @return Users
      */
     public function setPass(string $pass): self
     {
         $this->pass = $pass;
+        return $this;
     }
+
+    /**
+     * @var
+     * * @Assert\EqualTo(propertyPath="pass", message="Les mots de passe ne coïncident pas!" ))
+     */
     public $confirm_password;
 
     /**
@@ -98,6 +110,7 @@ class Users
     public function setConfirmPassword($confirm_password):self
     {
         $this->confirm_password = $confirm_password;
+        return $this;
     }
     /**
      * @var string
@@ -116,10 +129,12 @@ class Users
 
     /**
      * @param string $username
+     * @return Users
      */
     public function setUsername(string $username): self
     {
         $this->username = $username;
+        return $this;
     }
     /**
      * @var string
@@ -138,15 +153,37 @@ class Users
 
     /**
      * @param string $mail
+     * @return Users
      */
     public function setMail(string $mail): self
     {
         $this->mail = $mail;
+        return $this;
     }
 
 
     public function __toString()
     {
         return $this->username;
+    }
+
+    public function getRoles()
+    {
+      return['ROLE_USER'];
+    }
+
+    public function getPassword()
+    {
+        // TODO: Implement getPassword() method.
+    }
+
+    public function getSalt()
+    {
+        // TODO: Implement getSalt() method.
+    }
+
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
     }
 }
