@@ -3,11 +3,8 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
-use Symfony\Component\Validator\Constraints as Assert;
-use Symfony\Component\Validator\Constraints\Length;
-
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
@@ -16,9 +13,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * @ORM\Table(name="Users")
  * @ORM\Entity
  */
-
 class Users implements UserInterface
-
 {
     /**
      * @var int
@@ -31,21 +26,6 @@ class Users implements UserInterface
 
 
     /**
-     * @return int
-     */
-    public function getUserId(): ?int
-    {
-        return $this->userId;
-    }
-
-    /**
-     * @param int $userId
-     */
-    public function setUserId(int $userId): self
-    {
-        $this->userId = $userId;
-    }
-    /**
      * @var string
      *
      * @ORM\Column(name="role", type="string", length=50, nullable=false)
@@ -57,24 +37,6 @@ class Users implements UserInterface
      * )
      */
     private $role;
-
-    /**
-     * @return string
-     */
-    public function getRole(): ?string
-    {
-        return $this->role;
-    }
-
-    /**
-     * @param string $role
-     * @return Users
-     */
-    public function setRole(string $role): self
-    {
-        $this->role = $role;
-        return $this;
-    }
 
     /**
      * @var string
@@ -94,7 +56,7 @@ class Users implements UserInterface
      *
      */
     public $confirm_pass;
-  
+
     /**
      * @var string
      *
@@ -107,7 +69,7 @@ class Users implements UserInterface
      * )
      */
     private $username;
-  
+
     /**
      * @var string
      *
@@ -120,7 +82,6 @@ class Users implements UserInterface
      *
      */
     private $mail;
-
 
     public function getUserId(): ?int
     {
@@ -160,24 +121,10 @@ class Users implements UserInterface
     }
 
 
-
-    public function __toString()  {
-        return $this->username;
-    }
-  
     public function getUsername(): ?string
     {
         return $this->username;
     }
-
-    public function getRoles()
-    {
-      return['ROLE_USER'];
-    }
-
-    public function getPassword()
-    {
-        // TODO: Implement getPassword() method.
 
     public function setUsername(string $username): self
     {
@@ -193,7 +140,7 @@ class Users implements UserInterface
 
     public function setMail(string $mail): self
     {
-       return $this->mail = $mail;
+        return $this->mail = $mail;
 
     }
 
@@ -206,9 +153,9 @@ class Users implements UserInterface
     {
         // TODO: Implement getSalt() method.
     }
-
-    public function eraseCredentials()
+    public function getRoles()
     {
-        // TODO: Implement eraseCredentials() method.
+        // TODO: Implement getRoles() method.
     }
+
 }

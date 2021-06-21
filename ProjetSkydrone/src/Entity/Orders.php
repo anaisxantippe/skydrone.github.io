@@ -11,6 +11,7 @@ use Symfony\Component\Validator\Constraints\Date;
  * Orders
  *
  * @ORM\Table(name="Orders", indexes={@ORM\Index(name="customer_id", columns={"customer_id"}), @ORM\Index(name="product_id", columns={"product_id"})})
+ * @ORM\Table(name="orders", indexes={@ORM\Index(name="product_id", columns={"product_id"}), @ORM\Index(name="customer_id", columns={"customer_id"})})
  * @ORM\Entity
  */
 class Orders
@@ -27,9 +28,9 @@ class Orders
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="order_date", type="date", nullable=false)
      */
     private $orderDate;
+    }
 
     /**
      * @var bool
