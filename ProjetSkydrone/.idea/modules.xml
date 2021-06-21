@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../../travaux-afpa/Symphony/Mon_projet/.idea/Mon_projet.iml" filepath="$PROJECT_DIR$/../../travaux-afpa/Symphony/Mon_projet/.idea/Mon_projet.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/ProjetSkydrone.iml" filepath="$PROJECT_DIR$/.idea/ProjetSkydrone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/skydrone.iml" filepath="$PROJECT_DIR$/.idea/skydrone.iml" />
     </modules>
   </component>
 </project>
