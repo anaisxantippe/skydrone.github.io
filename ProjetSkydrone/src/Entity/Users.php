@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 
@@ -12,7 +13,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table(name="Users")
  * @ORM\Entity
  */
-class Users
+class Users implements UserInterface
 {
     /**
      * @var int
@@ -42,13 +43,19 @@ class Users
      *
      * @ORM\Column(name="pass", type="string", length=200, nullable=false)
      * @Assert\NotBlank
-     * @Assert\Length(min=6, max=20, minMessage="Format de mot de passe invalide")
+     * @Assert\Length(min=6, max=20, minMessage="Doit faire entre 8 et 15 caractères, avec majuscule, minuscule, chiffre et caractère spécial")
      * @Assert\Regex (
      *     pattern      ="/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})$/",
      *     htmlPattern  ="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})"
      *)
      */
-    private $pass;
+    private $password;
+
+    /**
+     * @Assert\EqualTo (propertyPath="password", message="Votre mot de passe doit être identique")
+     *
+     */
+    public $confirm_pass;
 
     /**
      * @var string
@@ -93,17 +100,26 @@ class Users
         return $this;
     }
 
-    public function getPass(): ?string
+    public function getPassword(): ?string
     {
-        return $this->pass;
+        return $this->password;
     }
 
-    public function setPass(string $pass): self
+    /**
+     * @return mixed
+     */
+    public function getConfirmPass()
     {
-        $this->pass = $pass;
+        return $this->confirm_pass;
+    }
+
+    public function setPassword(string $password): self
+    {
+        $this->password= $password;
 
         return $this;
     }
+
 
     public function getUsername(): ?string
     {
@@ -129,5 +145,18 @@ class Users
         return $this;
     }
 
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
+    }
+
+    public function getSalt()
+    {
+        // TODO: Implement getSalt() method.
+    }
+    public function getRoles()
+    {
+        // TODO: Implement getRoles() method.
+    }
 
 }
