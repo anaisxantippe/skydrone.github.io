@@ -38,5 +38,34 @@ class DeliveryForm
      */
     private $order;
 
+    public function getDeliveryId(): ?int
+    {
+        return $this->deliveryId;
+    }
+
+    public function getDeliveryDate(): ?\DateTimeInterface
+    {
+        return $this->deliveryDate;
+    }
+
+    public function setDeliveryDate(\DateTimeInterface $deliveryDate): self
+    {
+        $this->deliveryDate = $deliveryDate;
+
+        return $this;
+    }
+
+    public function getOrder(): ?Orders
+    {
+        return $this->order;
+    }
+
+    public function setOrder(?Orders $order): self
+    {
+        $this->order = $order;
+
+        return $this;
+    }
+
 
 }

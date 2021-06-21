@@ -55,5 +55,58 @@ class Opinion
      */
     private $customer;
 
+    public function getOpinionId(): ?int
+    {
+        return $this->opinionId;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getProduct(): ?Product
+    {
+        return $this->product;
+    }
+
+    public function setProduct(?Product $product): self
+    {
+        $this->product = $product;
+
+        return $this;
+    }
+
+    public function getCustomer(): ?Customers
+    {
+        return $this->customer;
+    }
+
+    public function setCustomer(?Customers $customer): self
+    {
+        $this->customer = $customer;
+
+        return $this;
+    }
+
 
 }

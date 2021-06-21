@@ -38,5 +38,34 @@ class Bill
      */
     private $order;
 
+    public function getBillId(): ?int
+    {
+        return $this->billId;
+    }
+
+    public function getBillDate(): ?\DateTimeInterface
+    {
+        return $this->billDate;
+    }
+
+    public function setBillDate(\DateTimeInterface $billDate): self
+    {
+        $this->billDate = $billDate;
+
+        return $this;
+    }
+
+    public function getOrder(): ?Orders
+    {
+        return $this->order;
+    }
+
+    public function setOrder(?Orders $order): self
+    {
+        $this->order = $order;
+
+        return $this;
+    }
+
 
 }
