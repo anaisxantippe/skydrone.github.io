@@ -1,29 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d7a4672-df21-44a7-893f-02efb8bcc422" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Controller/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Skydrone.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Skydrone.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="3d7a4672-df21-44a7-893f-02efb8bcc422" name="Default Changelist" comment="Test premier commit branche users">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/.env" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Bill.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Bill.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Customers.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Customers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/DeliveryForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/DeliveryForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Executives.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Executives.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Opinion.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Opinion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Orders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/ResourceDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/ResourceDepartment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/SalesDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/SalesDepartment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Suppliers.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Suppliers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/users/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/users/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/users/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/users/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/users/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/users/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/users/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/users/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +185,16 @@
       <workItem from="1623840066004" duration="1442000" />
       <workItem from="1623921722090" duration="9619000" />
       <workItem from="1624114812731" duration="20000" />
+      <workItem from="1624261826335" duration="1765000" />
     </task>
+    <task id="LOCAL-00001" summary="Test premier commit branche users">
+      <created>1624262111804</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624262111805</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,5 +211,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Test premier commit branche users" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test premier commit branche users" />
   </component>
 </project>

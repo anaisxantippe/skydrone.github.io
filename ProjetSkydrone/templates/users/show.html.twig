@@ -1,14 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Users{% endblock %}
+{% block title %}Utilisateurs{% endblock %}
 
 {% block body %}
-    <h1>Users</h1>
+    <h1>Utilisateurs</h1>
 
     <table class="table">
         <tbody>
             <tr>
-                <th>UserId</th>
+                <th>ID Utilisateur</th>
                 <td>{{ user.userId }}</td>
             </tr>
             <tr>
@@ -16,23 +16,23 @@
                 <td>{{ user.role }}</td>
             </tr>
             <tr>
-                <th>Pass</th>
+                <th>Mot de passe</th>
                 <td>{{ user.pass }}</td>
             </tr>
             <tr>
-                <th>Username</th>
+                <th>Identifiant</th>
                 <td>{{ user.username }}</td>
             </tr>
             <tr>
-                <th>Mail</th>
+                <th>Email</th>
                 <td>{{ user.mail }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('users_index') }}">back to list</a>
+    <a href="{{ path('users_index') }}">Retour à la liste</a>
 
-    <a href="{{ path('users_edit', {'userId': user.userId}) }}">edit</a>
+    <a href="{{ path('users_edit', {'userId': user.userId}) }}">Modifier</a>
 
     {{ include('users/_delete_form.html.twig') }}
 {% endblock %}
