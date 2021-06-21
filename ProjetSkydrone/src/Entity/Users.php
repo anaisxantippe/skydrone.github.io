@@ -3,11 +3,13 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * Users
  *
- * @ORM\Table(name="users")
+ * @ORM\Table(name="Users")
  * @ORM\Entity
  */
 class Users
@@ -21,10 +23,17 @@ class Users
      */
     private $userId;
 
+
     /**
      * @var string
      *
      * @ORM\Column(name="role", type="string", length=50, nullable=false)
+     * @Assert\NotBlank
+     * @Assert\Length(min=10, max=60, minMessage="Format de role invalide")
+     * @Assert\Regex(
+     *     pattern     = "/^[a-z]+$/i",
+     *     htmlPattern = "[a-zA-Z]+"
+     * )
      */
     private $role;
 
@@ -32,6 +41,12 @@ class Users
      * @var string
      *
      * @ORM\Column(name="pass", type="string", length=200, nullable=false)
+     * @Assert\NotBlank
+     * @Assert\Length(min=6, max=20, minMessage="Format de mot de passe invalide")
+     * @Assert\Regex (
+     *     pattern      ="/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})$/",
+     *     htmlPattern  ="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})"
+     *
      */
     private $pass;
 
@@ -39,6 +54,12 @@ class Users
      * @var string
      *
      * @ORM\Column(name="username", type="string", length=50, nullable=false)
+     * @Assert\NotBlank
+     * @Assert\Length(min=5, max=60, minMessage="Format d'identifiant invalide")
+     * @Assert\Regex(
+     *     pattern     = "/^[a-zA-Z0-9]+$/",
+     *     htmlPattern = "[a-zA-Z0-9]+"
+     * )
      */
     private $username;
 
@@ -46,8 +67,67 @@ class Users
      * @var string
      *
      * @ORM\Column(name="mail", type="string", length=50, nullable=false)
+     * @Assert\NotBlank
+     *@Assert\Regex(
+     *     pattern     = "/^([\w\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})/i",
+     *     htmlPattern = "([\w\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})"
+     * )
+     *
      */
     private $mail;
+
+    public function getUserId(): ?int
+    {
+        return $this->userId;
+    }
+
+    public function getRole(): ?string
+    {
+        return $this->role;
+    }
+
+    public function setRole(string $role): self
+    {
+        $this->role = $role;
+
+        return $this;
+    }
+
+    public function getPass(): ?string
+    {
+        return $this->pass;
+    }
+
+    public function setPass(string $pass): self
+    {
+        $this->pass = $pass;
+
+        return $this;
+    }
+
+    public function getUsername(): ?string
+    {
+        return $this->username;
+    }
+
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
+
+        return $this;
+    }
+
+    public function getMail(): ?string
+    {
+        return $this->mail;
+    }
+
+    public function setMail(string $mail): self
+    {
+        $this->mail = $mail;
+
+        return $this;
+    }
 
 
 }

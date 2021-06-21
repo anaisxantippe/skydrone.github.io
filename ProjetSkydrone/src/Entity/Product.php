@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Product
  *
- * @ORM\Table(name="product", indexes={@ORM\Index(name="suppliers_id", columns={"suppliers_id"})})
+ * @ORM\Table(name="Product", indexes={@ORM\Index(name="suppliers_id", columns={"suppliers_id"})})
  * @ORM\Entity
  */
 class Product
@@ -59,8 +59,5 @@ class Product
      */
     private $suppliers;
 
-    public function __toString()
-    {
-        return $this->productName;
-    }
+
 }
