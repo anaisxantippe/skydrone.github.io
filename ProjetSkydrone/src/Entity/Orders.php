@@ -10,7 +10,7 @@ use Symfony\Component\Validator\Constraints\Date;
 /**
  * Orders
  *
- * @ORM\Table(name="orders", indexes={@ORM\Index(name="product_id", columns={"product_id"}), @ORM\Index(name="customer_id", columns={"customer_id"})})
+ * @ORM\Table(name="Orders", indexes={@ORM\Index(name="customer_id", columns={"customer_id"}), @ORM\Index(name="product_id", columns={"product_id"})})
  * @ORM\Entity
  */
 class Orders
@@ -25,15 +25,19 @@ class Orders
     private $orderId;
 
     /**
-     * @return mixed
+     * @var \DateTime
+     *
+     * @ORM\Column(name="order_date", type="date", nullable=false)
      */
-    public function getId(): ?int
-    {
-        return $this->orderId;
-    }
-
+    private $orderDate;
 
     /**
+     * @var bool
+     *
+     * @ORM\Column(name="delayed_payment", type="boolean", nullable=false)
+     */
+    private $delayedPayment;
+
 
      * @var DateTime
      *
@@ -41,11 +45,19 @@ class Orders
      * @Assert\NotBlank(
      *     message="Veuillez renseigner une date"
      * )
-     */
-    private $orderDate;
     /**
-     * @return mixed
+     * @var int
+     *
+     * @ORM\Column(name="df_total", type="integer", nullable=false)
      */
+    private $dfTotal;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="quantity", type="integer", nullable=false)
+     */
+
     public
     function getorderDate(): ?datetime
     {
@@ -59,6 +71,10 @@ class Orders
         return $this;
     }
 
+
+    private $orderDate;
+
+
     /**
      * @var bool
      *
@@ -68,24 +84,16 @@ class Orders
     private $delayedPayment;
 
     /**
-     * @return mixed
+     * @var int
+     *
+     * @ORM\Column(name="df_total", type="integer", nullable=false)
      */
-    public
-    function getDelayedPayment(): ?bool
-    {
-        return $this->delayedPayment;
-    }
-
-    public
-    function setdelayedPayment(bool $delayedPayment): self
-    {
-        $this->delayedPayment = $delayedPayment;
-        return $this;
-    }
+    private $dfTotal;
 
     /**
      * @var int
      *
+
      * @ORM\Column(name="df_total", type="integer", nullable=false)
      * @Assert\NotBlank(
      *     message="Veuillez entrer un total hors taxe "
@@ -94,53 +102,9 @@ class Orders
      *     pattern="^\d+(,\d{3})*(\.\d{1,2})?$",
      *     message="Caratère(s) non valide(s)"
      * )
-     */
-    private $dfTotal;
-
-    /**
-     * @return mixed
-     */
-    public
-    function getDfTotal(): ?int
-    {
-        return $this->dfTotal;
-    }
-
-    public
-    function setDftotal(int $dftotal): self
-    {
-        $this->dfTotal = $dftotal;
-        return $this;
-    }
-
-    /**
-     * @var int
-     *
      * @ORM\Column(name="quantity", type="integer", nullable=false)
-     * @Assert\NotBlank (
-     *     message="Veuillez entrer une quantité "
-     * )
-     * @Assert\Regex (
-     *     pattern="^0$|^[1-9][0-9]*$",
-     *     message="Caratère(s) non valide(s)"
-     * )
      */
     private $quantity;
-    /**
-     * @return mixed
-     */
-    public
-    function getQuantity(): ?int
-    {
-        return $this->quantity;
-    }
-
-    public
-    function setQuantity(string $quantity): self
-    {
-        $this->quantity = $quantity;
-        return $this;
-    }
 
     /**
      * @var bool
@@ -150,21 +114,112 @@ class Orders
     private $payed;
 
     /**
-     * @return mixed
+     * @var int|null
+     *
+     * @ORM\Column(name="discount", type="integer", nullable=true)
      */
-    public
-    function getPayed(): ?bool
+    private $discount;
+
+    /**
+     * @var int
+     *
+
+     * @ORM\Column(name="quantity", type="integer", nullable=false)
+     * @Assert\NotBlank (
+     *     message="Veuillez entrer une quantité "
+     * )
+     * @Assert\Regex (
+     *     pattern="^0$|^[1-9][0-9]*$",
+     *     message="Caratère(s) non valide(s)"
+     * )
+     * @ORM\Column(name="total", type="integer", nullable=false)
+     */
+    private $total;
+
+    /**
+     * @var \Customers
+     *
+     * @ORM\ManyToOne(targetEntity="Customers")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="customer_id", referencedColumnName="customer_id")
+     * })
+     */
+    private $customer;
+
+    /**
+     * @var \Product
+     *
+     * @ORM\ManyToOne(targetEntity="Product")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="product_id", referencedColumnName="product_id")
+     * })
+     */
+    private $product;
+
+    private $quantity;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="payed", type="boolean", nullable=false)
+     */
+    private $payed;
+
+    /**
+     * @var int|null
+     *
+     * @ORM\Column(name="discount", type="integer", nullable=true)
+     */
+    private $discount;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="total", type="integer", nullable=false)
+     */
+    private $total;
+
+    /**
+     * @var \Customers
+     *
+     * @ORM\ManyToOne(targetEntity="Customers")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="customer_id", referencedColumnName="customer_id")
+     * })
+     */
+    private $customer;
+
+    /**
+     * @var \Product
+     *
+     * @ORM\ManyToOne(targetEntity="Product")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="product_id", referencedColumnName="product_id")
+     * })
+     */
+    private $product;
+
+    public function getOrderId(): ?int
     {
-        return $this->payed;
+        return $this->orderId;
     }
 
-    public
-    function setPayed(bool $payed): self
+    public function getOrderDate(): ?\DateTimeInterface
     {
-        $this->payed = $payed;
+        return $this->orderDate;
+    }
+
+    public function setOrderDate(\DateTimeInterface $orderDate): self
+    {
+        $this->orderDate = $orderDate;
+
         return $this;
     }
 
+    public function getDelayedPayment(): ?bool
+    {
+        return $this->delayedPayment;
+    }
 
     /**
      * @var int|null
@@ -175,24 +230,58 @@ class Orders
      *     message="Caratère(s) non valide(s)"
      * )
      */
+    public function setDelayedPayment(bool $delayedPayment): self
+    {
+        $this->delayedPayment = $delayedPayment;
 
+        return $this;
+    }
 
+    public function getDfTotal(): ?int
+    {
+        return $this->dfTotal;
+    }
 
-    private $discount;
+    public function setDfTotal(int $dfTotal): self
+    {
+        $this->dfTotal = $dfTotal;
 
-    /**
-     * @return int|null
-     */
-    public
-    function getDiscount(): ?int
+        return $this;
+    }
+
+    public function getQuantity(): ?int
+    {
+        return $this->quantity;
+    }
+
+    public function setQuantity(int $quantity): self
+    {
+        $this->quantity = $quantity;
+
+        return $this;
+    }
+
+    public function getPayed(): ?bool
+    {
+        return $this->payed;
+    }
+
+    public function setPayed(bool $payed): self
+    {
+        $this->payed = $payed;
+
+        return $this;
+    }
+
+    public function getDiscount(): ?int
     {
         return $this->discount;
     }
 
-    public
-    function setDiscount(int $discount): self
+    public function setDiscount(?int $discount): self
     {
         $this->discount = $discount;
+
         return $this;
     }
 
@@ -212,16 +301,21 @@ class Orders
     private $total;
     public
     function getTotal(): ?int
+
+
+    public function getTotal(): ?int
+
     {
         return $this->total;
     }
 
-    public
-    function setTotal(int $total): self
+    public function setTotal(int $total): self
     {
         $this->total = $total;
+
         return $this;
     }
+
 
     /**
      * @var \Customers
@@ -239,14 +333,16 @@ class Orders
 
     public
     function getCustomer(): ?string
+
+    public function getCustomer(): ?Customers
     {
         return $this->customer;
     }
 
-    public
-    function setCustomer(string $customer): self
+    public function setCustomer(?Customers $customer): self
     {
         $this->customer = $customer;
+
         return $this;
     }
     /**
@@ -262,17 +358,15 @@ class Orders
      */
     private $product;
 
-
-    public
-    function getProduct(): ?string
+    public function getProduct(): ?Product
     {
         return $this->product;
     }
 
-    public
-    function setProduct(string $product): self
+    public function setProduct(?Product $product): self
     {
         $this->product = $product;
+
         return $this;
     }
 

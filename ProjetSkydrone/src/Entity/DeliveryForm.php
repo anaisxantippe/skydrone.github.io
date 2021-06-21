@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * DeliveryForm
  *
- * @ORM\Table(name="delivery_form", indexes={@ORM\Index(name="order_id", columns={"order_id"})})
+ * @ORM\Table(name="Delivery_form", indexes={@ORM\Index(name="order_id", columns={"order_id"})})
  * @ORM\Entity
  */
 class DeliveryForm
@@ -37,6 +37,35 @@ class DeliveryForm
      * })
      */
     private $order;
+
+    public function getDeliveryId(): ?int
+    {
+        return $this->deliveryId;
+    }
+
+    public function getDeliveryDate(): ?\DateTimeInterface
+    {
+        return $this->deliveryDate;
+    }
+
+    public function setDeliveryDate(\DateTimeInterface $deliveryDate): self
+    {
+        $this->deliveryDate = $deliveryDate;
+
+        return $this;
+    }
+
+    public function getOrder(): ?Orders
+    {
+        return $this->order;
+    }
+
+    public function setOrder(?Orders $order): self
+    {
+        $this->order = $order;
+
+        return $this;
+    }
 
 
 }

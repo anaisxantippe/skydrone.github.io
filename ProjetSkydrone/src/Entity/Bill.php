@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Bill
  *
- * @ORM\Table(name="bill", indexes={@ORM\Index(name="order_id", columns={"order_id"})})
+ * @ORM\Table(name="Bill", indexes={@ORM\Index(name="order_id", columns={"order_id"})})
  * @ORM\Entity
  */
 class Bill
@@ -37,6 +37,35 @@ class Bill
      * })
      */
     private $order;
+
+    public function getBillId(): ?int
+    {
+        return $this->billId;
+    }
+
+    public function getBillDate(): ?\DateTimeInterface
+    {
+        return $this->billDate;
+    }
+
+    public function setBillDate(\DateTimeInterface $billDate): self
+    {
+        $this->billDate = $billDate;
+
+        return $this;
+    }
+
+    public function getOrder(): ?Orders
+    {
+        return $this->order;
+    }
+
+    public function setOrder(?Orders $order): self
+    {
+        $this->order = $order;
+
+        return $this;
+    }
 
 
 }

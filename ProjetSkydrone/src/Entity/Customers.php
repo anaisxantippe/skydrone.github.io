@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Customers
  *
- * @ORM\Table(name="customers", indexes={@ORM\Index(name="user_id", columns={"user_id"}), @ORM\Index(name="sd_id", columns={"sd_id"})})
+ * @ORM\Table(name="Customers", indexes={@ORM\Index(name="user_id", columns={"user_id"}), @ORM\Index(name="sd_id", columns={"sd_id"})})
  * @ORM\Entity
  */
 class Customers
@@ -138,6 +138,203 @@ class Customers
      * })
      */
     private $user;
+
+    public function getCustomerId(): ?int
+    {
+        return $this->customerId;
+    }
+
+    public function getRole(): ?string
+    {
+        return $this->role;
+    }
+
+    public function setRole(string $role): self
+    {
+        $this->role = $role;
+
+        return $this;
+    }
+
+    public function getCompany(): ?string
+    {
+        return $this->company;
+    }
+
+    public function setCompany(?string $company): self
+    {
+        $this->company = $company;
+
+        return $this;
+    }
+
+    public function getLastname(): ?string
+    {
+        return $this->lastname;
+    }
+
+    public function setLastname(string $lastname): self
+    {
+        $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    public function getFirstname(): ?string
+    {
+        return $this->firstname;
+    }
+
+    public function setFirstname(string $firstname): self
+    {
+        $this->firstname = $firstname;
+
+        return $this;
+    }
+
+    public function getDeliveryAdress(): ?string
+    {
+        return $this->deliveryAdress;
+    }
+
+    public function setDeliveryAdress(string $deliveryAdress): self
+    {
+        $this->deliveryAdress = $deliveryAdress;
+
+        return $this;
+    }
+
+    public function getDeliveryZip(): ?string
+    {
+        return $this->deliveryZip;
+    }
+
+    public function setDeliveryZip(string $deliveryZip): self
+    {
+        $this->deliveryZip = $deliveryZip;
+
+        return $this;
+    }
+
+    public function getDeliveryCity(): ?string
+    {
+        return $this->deliveryCity;
+    }
+
+    public function setDeliveryCity(string $deliveryCity): self
+    {
+        $this->deliveryCity = $deliveryCity;
+
+        return $this;
+    }
+
+    public function getDeliveryCountry(): ?string
+    {
+        return $this->deliveryCountry;
+    }
+
+    public function setDeliveryCountry(string $deliveryCountry): self
+    {
+        $this->deliveryCountry = $deliveryCountry;
+
+        return $this;
+    }
+
+    public function getBillingAdress(): ?string
+    {
+        return $this->billingAdress;
+    }
+
+    public function setBillingAdress(string $billingAdress): self
+    {
+        $this->billingAdress = $billingAdress;
+
+        return $this;
+    }
+
+    public function getBillingCity(): ?string
+    {
+        return $this->billingCity;
+    }
+
+    public function setBillingCity(string $billingCity): self
+    {
+        $this->billingCity = $billingCity;
+
+        return $this;
+    }
+
+    public function getBillingZip(): ?string
+    {
+        return $this->billingZip;
+    }
+
+    public function setBillingZip(string $billingZip): self
+    {
+        $this->billingZip = $billingZip;
+
+        return $this;
+    }
+
+    public function getBillingCountry(): ?string
+    {
+        return $this->billingCountry;
+    }
+
+    public function setBillingCountry(string $billingCountry): self
+    {
+        $this->billingCountry = $billingCountry;
+
+        return $this;
+    }
+
+    public function getVat(): ?int
+    {
+        return $this->vat;
+    }
+
+    public function setVat(int $vat): self
+    {
+        $this->vat = $vat;
+
+        return $this;
+    }
+
+    public function getPhoneNumber(): ?string
+    {
+        return $this->phoneNumber;
+    }
+
+    public function setPhoneNumber(string $phoneNumber): self
+    {
+        $this->phoneNumber = $phoneNumber;
+
+        return $this;
+    }
+
+    public function getSd(): ?SalesDepartment
+    {
+        return $this->sd;
+    }
+
+    public function setSd(?SalesDepartment $sd): self
+    {
+        $this->sd = $sd;
+
+        return $this;
+    }
+
+    public function getUser(): ?Users
+    {
+        return $this->user;
+    }
+
+    public function setUser(?Users $user): self
+    {
+        $this->user = $user;
+
+        return $this;
+    }
 
 
 }

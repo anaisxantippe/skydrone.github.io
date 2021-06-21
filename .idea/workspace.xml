@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d7a4672-df21-44a7-893f-02efb8bcc422" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/config/packages/twig.yaml" afterDir="false" />
+    <list default="true" id="3d7a4672-df21-44a7-893f-02efb8bcc422" name="Default Changelist" comment="changements formulaires">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Controller/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Form/UsersType.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Form/UsersType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/users/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/users/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/users/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/users/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/users/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/users/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/users/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/users/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/ProjetSkydrone/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable path="composer" />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -147,6 +157,7 @@
       <path value="$PROJECT_DIR$/ProjetSkydrone/vendor/symfony/twig-bundle" />
       <path value="$PROJECT_DIR$/ProjetSkydrone/vendor/symfony/phpunit-bridge" />
       <path value="$PROJECT_DIR$/ProjetSkydrone/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/ProjetSkydrone/vendor/symfony/web-server-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1u1jbZisaqfZ6EnliTWEhnJl5Sr" />
@@ -164,6 +175,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -175,7 +187,25 @@
       <option name="presentableId" value="Default" />
       <updated>1623840063276</updated>
       <workItem from="1623840066004" duration="1442000" />
+      <workItem from="1623921722090" duration="9619000" />
+      <workItem from="1624114812731" duration="20000" />
+      <workItem from="1624261826335" duration="5811000" />
     </task>
+    <task id="LOCAL-00001" summary="Test premier commit branche users">
+      <created>1624262111804</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624262111805</updated>
+    </task>
+    <task id="LOCAL-00002" summary="changements formulaires">
+      <created>1624270885045</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1624270885045</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,5 +221,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Test premier commit branche users" />
+    <MESSAGE value="changements formulaires" />
+    <option name="LAST_COMMIT_MESSAGE" value="changements formulaires" />
   </component>
 </project>
