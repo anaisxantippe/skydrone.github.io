@@ -59,5 +59,9 @@ class Product
      */
     private $suppliers;
 
-
+    public function __toString()
+    {
+        return $this->productName;
+        // TODO: Implement __toString() method.
+    }
 }

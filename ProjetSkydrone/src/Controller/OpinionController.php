@@ -94,4 +94,12 @@ class OpinionController extends AbstractController
 
         return $this->redirectToRoute('opinion_index');
     }
+
+ //   public function getProduct() {
+  //      $product = $this->loadModel('Product');
+    //    $productList = $product->getAll();
+      //  $this->render('_form', [
+        //    'productList' => $productList
+       // ]);
+    //}
 }

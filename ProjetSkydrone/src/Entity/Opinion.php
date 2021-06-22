@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Opinion
@@ -25,6 +26,12 @@ class Opinion
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=50, nullable=false)
+     * @Assert\Length(min=3, max=10, minMessage="Le titre doit comporter au moins 3 caractères ")
+     * @Assert\Regex (
+     *    pattern="/([A-Za-zéèêëùüàäâïî0-9.,!-?])/",
+     *     match=true,
+     *    message="Caractère(s) non valide(s)"
+     * )
      */
     public $title;
 
@@ -32,6 +39,10 @@ class Opinion
      * @var string
      *
      * @ORM\Column(name="description", type="text", length=65535, nullable=false)
+     * @Assert\Regex (
+     *     pattern="/([A-Za-zéèêëùüàäâïî0-9.,!-?%])/",
+     *     message="Caractère(s) non valide(s)"
+     * )
      */
     public $description;
 
@@ -54,6 +65,11 @@ class Opinion
      * })
      */
     public $customer;
+
+    public function getOpinionId(): ?int
+    {
+        return $this->opinionId;
+    }
 
 
 }

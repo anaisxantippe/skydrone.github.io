@@ -139,5 +139,11 @@ class Customers
      */
     private $user;
 
+    public function __toString()
+    {
+        return $this->lastname;
+        // TODO: Implement __toString() method.
+    }
+
 
 }
