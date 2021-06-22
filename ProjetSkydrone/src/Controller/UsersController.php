@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use App\Entity\Users;
 use App\Form\UsersType;
-use Doctrine\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -48,13 +47,20 @@ class UsersController extends AbstractController
             $entityManager->persist($user);
             $entityManager->flush();
 
-            return $this->redirectToRoute('users_index');
+            return $this->redirectToRoute('security_login');
         }
 
         return $this->render('users/new.html.twig', [
             'user' => $user,
             'form' => $form->createView(),
         ]);
+    }
+    /**
+     * @Route("/connexion", name="security_login")
+     */
+    public function login(): Response
+    {
+        return $this->render('security/login.html.twig');
     }
 
     /**
@@ -100,4 +106,6 @@ class UsersController extends AbstractController
 
         return $this->redirectToRoute('users_index');
     }
+
+
 }

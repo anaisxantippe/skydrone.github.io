@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -12,6 +13,10 @@ use Symfony\Component\Validator\Constraints as Assert;
  *
  * @ORM\Table(name="Users")
  * @ORM\Entity
+ * @UniqueEntity(
+ *     fields={"mail"},
+ *     message= "L'email que vous avec indiqué est déjà utilisé"
+ * )
  */
 class Users implements UserInterface
 {
@@ -75,7 +80,8 @@ class Users implements UserInterface
      *
      * @ORM\Column(name="mail", type="string", length=50, nullable=false)
      * @Assert\NotBlank
-     *@Assert\Regex(
+     * @Assert\Email()
+     * @Assert\Regex(
      *     pattern     = "/^([\w\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})/i",
      *     htmlPattern = "([\w\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})"
      * )
@@ -115,7 +121,7 @@ class Users implements UserInterface
 
     public function setPassword(string $password): self
     {
-        $this->password= $password;
+        $this->password = $password;
 
         return $this;
     }
@@ -154,9 +160,10 @@ class Users implements UserInterface
     {
         // TODO: Implement getSalt() method.
     }
-    public function getRoles()
+
+    public function getRoles(): array
     {
-        // TODO: Implement getRoles() method.
+        return array('ROLE_USER');
     }
 
 }
