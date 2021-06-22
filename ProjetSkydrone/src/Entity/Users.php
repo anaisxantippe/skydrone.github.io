@@ -30,7 +30,7 @@ class Users implements UserInterface
      *
      * @ORM\Column(name="role", type="string", length=50, nullable=false)
      * @Assert\NotBlank
-     * @Assert\Length(min=10, max=60, minMessage="Format de role invalide")
+     * @Assert\Length(min=5, max=60, minMessage="Format de role invalide")
      * @Assert\Regex(
      *     pattern     = "/^[a-z]+$/i",
      *     htmlPattern = "[a-zA-Z]+"
@@ -140,7 +140,8 @@ class Users implements UserInterface
 
     public function setMail(string $mail): self
     {
-        return $this->mail = $mail;
+        $this->mail = $mail;
+        return $this;
 
     }
 

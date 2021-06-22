@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Users;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -14,10 +15,10 @@ class RegistrationType extends AbstractType
     {
         $builder
             ->add('role')
-            ->add('pass',PasswordType::class)
-            ->add('confirm_password',PasswordType::class)
+            ->add('password',PasswordType::class)
+            ->add('confirm_pass',PasswordType::class)
             ->add('username')
-            ->add('mail')
+            ->add('mail',EmailType::class)
         ;
     }
 
