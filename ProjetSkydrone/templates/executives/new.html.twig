@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Executives{% endblock %}
+
+{% block body %}
+    <h1>Enregistrer un nouveau membre de la direction  </h1>
+
+    {{ include('executives/_form.html.twig') }}
+
+    <a href="{{ path('executives_index') }}">Retour à la liste</a>
+{% endblock %}

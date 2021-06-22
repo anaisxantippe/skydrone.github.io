@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editer Direction{% endblock %}
+
+{% block body %}
+    <h1>Editer un membre de la direction</h1>
+
+    {{ include('executives/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('executives_index') }}">Retour à la liste</a>
+
+    {{ include('executives/_delete_form.html.twig') }}
+{% endblock %}

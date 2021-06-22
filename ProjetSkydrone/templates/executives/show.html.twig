@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Direction {% endblock %}
+
+{% block body %}
+    <h1>Direction </h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Identifiant </th>
+                <td>{{ executive.executivesId }}</td>
+            </tr>
+            <tr>
+                <th>Nom de Famille </th>
+                <td>{{ executive.lastname }}</td>
+            </tr>
+            <tr>
+                <th>Prénom </th>
+                <td>{{ executive.firstname }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ executive.adress }}</td>
+            </tr>
+            <tr>
+                <th>Code Postal </th>
+                <td>{{ executive.zipCode }}</td>
+            </tr>
+            <tr>
+                <th>Ville </th>
+                <td>{{ executive.city }}</td>
+            </tr>
+            <tr>
+                <th>Date De naissance </th>
+                <td>{{ executive.birthdate ? executive.birthdate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>numéro de téléphone </th>
+                <td>{{ executive.phoneNumber }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('executives_index') }}">Retour à la liste</a>
+
+    <a href="{{ path('executives_edit', {'executivesId': executive.executivesId}) }}">Editer</a>
+
+    {{ include('executives/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Direction {% endblock %}
+
+{% block body %}
+    <h1>Direction </h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Identifiant </th>
+                <th>Nom de famille </th>
+                <th>Prénom</th>
+                <th>Adresse</th>
+                <th>Code Postal </th>
+                <th>Ville </th>
+                <th>Date de naissance </th>
+                <th>Numero de téléphone </th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for executive in executives %}
+            <tr>
+                <td>{{ executive.executivesId }}</td>
+                <td>{{ executive.lastname }}</td>
+                <td>{{ executive.firstname }}</td>
+                <td>{{ executive.adress }}</td>
+                <td>{{ executive.zipCode }}</td>
+                <td>{{ executive.city }}</td>
+                <td>{{ executive.birthdate ? executive.birthdate|date('Y-m-d') : '' }}</td>
+                <td>{{ executive.phoneNumber }}</td>
+                <td>
+                    <a href="{{ path('executives_show', {'executivesId': executive.executivesId}) }}">show</a>
+                    <a href="{{ path('executives_edit', {'executivesId': executive.executivesId}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">Pas de données ! </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('executives_new') }}">Enregistrer un nouvel employé</a>
+{% endblock %}
