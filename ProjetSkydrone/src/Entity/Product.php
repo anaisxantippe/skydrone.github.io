@@ -20,7 +20,6 @@ class Product
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $productId;
     private int $productId;
 
     /**
@@ -34,7 +33,6 @@ class Product
      *     message="Les seuls caractères spéciaux acceptés sont '-' et '_' !"
      * )
      */
-    private $productName;
     private string $productName;
 
     /**
@@ -48,7 +46,6 @@ class Product
      *     message="Les seuls caractères spéciaux acceptés sont '-', '_', '?', '!', '.' et ',' !"
      * )
      */
-    private $description;
     private string $description;
 
     /**
@@ -62,7 +59,6 @@ class Product
      *     message="Vous ne pouvez utiliser que des chiffres et un '.' !"
      * )
      */
-    private $dfPrice;
     private int $dfPrice;
 
     /**
@@ -76,7 +72,6 @@ class Product
      *     message="Les seuls caractères spéciaux acceptés sont '-' et '_' !"
      * )
      */
-    private $picture;
     private string $picture;
 
     /**
@@ -94,7 +89,6 @@ class Product
      * )
      */
     private $suppliers;
-    private \Suppliers $suppliers;
 
     public function getProductId(): ?int
     {

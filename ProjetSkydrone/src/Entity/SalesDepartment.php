@@ -146,7 +146,6 @@ class SalesDepartment
     }
 
     /**
-     * @var \DateTime
      * @var DateTime
      *
      * @ORM\Column(name="birthdate", type="date", nullable=false)
