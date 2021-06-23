@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bill index{% endblock %}
+
+{% block body %}
+    <h1>Bill index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>BillId</th>
+                <th>BillDate</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for bill in bills %}
+            <tr>
+                <td>{{ bill.billId }}</td>
+                <td>{{ bill.billDate ? bill.billDate|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('bill_show', {'billId': bill.billId}) }}">show</a>
+                    <a href="{{ path('bill_edit', {'billId': bill.billId}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('bill_new') }}">Create new</a>
+{% endblock %}

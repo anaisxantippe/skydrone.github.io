@@ -21,6 +21,7 @@ class Product
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $productId;
+    private int $productId;
 
     /**
      * @var string
@@ -34,6 +35,7 @@ class Product
      * )
      */
     private $productName;
+    private string $productName;
 
     /**
      * @var string
@@ -47,6 +49,7 @@ class Product
      * )
      */
     private $description;
+    private string $description;
 
     /**
      * @var int
@@ -60,6 +63,7 @@ class Product
      * )
      */
     private $dfPrice;
+    private int $dfPrice;
 
     /**
      * @var string
@@ -73,6 +77,7 @@ class Product
      * )
      */
     private $picture;
+    private string $picture;
 
     /**
      * @var \Suppliers
@@ -89,6 +94,7 @@ class Product
      * )
      */
     private $suppliers;
+    private \Suppliers $suppliers;
 
     public function getProductId(): ?int
     {

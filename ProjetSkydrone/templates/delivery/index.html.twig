@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DeliveryForm index{% endblock %}
+
+{% block body %}
+    <h1>DeliveryForm index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>DeliveryId</th>
+                <th>DeliveryDate</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for delivery_form in delivery_forms %}
+            <tr>
+                <td>{{ delivery_form.deliveryId }}</td>
+                <td>{{ delivery_form.deliveryDate ? delivery_form.deliveryDate|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('delivery_show', {'deliveryId': delivery_form.deliveryId}) }}">show</a>
+                    <a href="{{ path('delivery_edit', {'deliveryId': delivery_form.deliveryId}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('delivery_new') }}">Create new</a>
+{% endblock %}
