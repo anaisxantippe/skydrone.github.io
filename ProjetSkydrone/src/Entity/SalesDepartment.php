@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -146,6 +147,7 @@ class SalesDepartment
 
     /**
      * @var \DateTime
+     * @var DateTime
      *
      * @ORM\Column(name="birthdate", type="date", nullable=false)
      */
