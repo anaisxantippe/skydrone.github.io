@@ -55,13 +55,13 @@ class UsersController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
-    /**
-     * @Route("/connexion", name="security_login")
-     */
-    public function login(): Response
-    {
-        return $this->render('security/login.html.twig');
-    }
+//    /**
+//     * @Route("/connexion", name="security_login")
+//     */
+//    public function login(): Response
+//    {
+//        return $this->render('security/login.html.twig');
+//    }
 
     /**
      * @Route("/{userId}", name="users_show", methods={"GET"})
