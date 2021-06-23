@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Opinion
@@ -19,21 +20,31 @@ class Opinion
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $opinionId;
+    public $opinionId;
 
     /**
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=50, nullable=false)
+     * @Assert\Length(min=3, max=10, minMessage="Le titre doit comporter au moins 3 caractères ")
+     * @Assert\Regex (
+     *    pattern="/([A-Za-zéèêëùüàäâïî0-9.,!-?])/",
+     *     match=true,
+     *    message="Caractère(s) non valide(s)"
+     * )
      */
-    private $title;
+    public $title;
 
     /**
      * @var string
      *
      * @ORM\Column(name="description", type="text", length=65535, nullable=false)
+     * @Assert\Regex (
+     *     pattern="/([A-Za-zéèêëùüàäâïî0-9.,!-?%])/",
+     *     message="Caractère(s) non valide(s)"
+     * )
      */
-    private $description;
+    public $description;
 
     /**
      * @var \Product
@@ -43,7 +54,7 @@ class Opinion
      *   @ORM\JoinColumn(name="product_id", referencedColumnName="product_id")
      * })
      */
-    private $product;
+    public $product;
 
     /**
      * @var \Customers
@@ -53,7 +64,12 @@ class Opinion
      *   @ORM\JoinColumn(name="customer_id", referencedColumnName="customer_id")
      * })
      */
-    private $customer;
+    public $customer;
+
+    public function getOpinionId(): ?int
+    {
+        return $this->opinionId;
+    }
 
     public function getOpinionId(): ?int
     {

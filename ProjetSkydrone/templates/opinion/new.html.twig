@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvel avis{% endblock %}
+
+{% block body %}
+    <h1 class="col-12 d-flex justify-content-center">Ajouter un avis</h1>
+
+    {{ include('opinion/_form.html.twig') }}
+
+    <a href="{{ path('opinion_index') }}">Retour à la liste</a>
+{% endblock %}
