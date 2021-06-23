@@ -3,32 +3,198 @@
 {% block title %}SkyDrone{% endblock %}
 
 {% block body %}
+    <style>
+        body {
+            background: linear-gradient(180deg, #612070 0%, #938FF3 56.25%, #0B114A 100%);
+            color: #f1f2f3;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        .carousel-item, .module {
+            background: linear-gradient(180deg, #FF4093 0%, rgba(232, 79, 146, 0) 100%);
+            border: 2px solid #FFFFFF;
+            box-sizing: border-box;
+            border-radius: 30px;
+            color: #f1f2f3;
+            position: relative;
+        }
+        li{
+            list-style: none;
+        }
+        img{
+            border: 1px solid #FFFFFF;
+            box-sizing: border-box;
+        }
+        .scroller {
+            height: 800px;
+            overflow-y: scroll;
+            scrollbar-color: rebeccapurple green;
+            scrollbar-width: thin;
+        }
 
-    <
-    <div>
-    <h1>Le projet Skydrone </h1>
-    <p> Découvrez tous les grands noms en matière de drone que nous avons sélectionnés spécialement pour vous. Quelles que soient vos préférences et vos habitudes en matière de drone, nous avons le produit qui vous correspond. Que vous soyez plutôt drones de prise de vue, drones sous marins ou drones de course, nous disposons d'un choix de marques et de produits important vous permettant de trouver LE produit qui correspond parfaitement à vos besoins et vos envies.
-
-    Retrouvez nos marques phares en matière de drone telles que DJI, Yuneec, Parrot, Eachine et bien d'autres.
-
-    Réalisez des prises de vues aériennes sublimes grâce à nos gammes spécialisées dans l'imagerie : DJI Inspire 2, DJI Phantom 4 Pro+, Yuneec H520 ...
-
-    Amusez-vous et apprenez à piloter de façon ludique grâce à notre gamme drones pour débutants. Le monde du drone s'offre à vous !</p>
-
+    </style>
+    <!-- Barre de recherche-->
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container-fluid">
+                <div class="col-6">
+                    <form class="d-flex">
+                        <i class="bi bi-search"></i>
+                        <input class="form-control me-2" type="search" placeholder="Search"
+                               aria-label="Rechercher un produit, une marque...">
+                        <button class="btn btn-outline-light" type="submit">Rechercher</button>
+                        <a href="#" class="link-light">Affiner</a>
+                    </form>
+                </div>
+            </div>
+        </nav>
     </div>
 
-    <div>
+    <div class="row">
 
-        <div class="vertical-menu">
-            <a href="#" class="active">Accueil </a>
-            <a href="#">Débuter</a>
-            <a href="#">Professionels</a>
-            <a href="#">Loisirs</a>
-            <a href="#">Sous-marin </a>
-            <a href="#">Prise de vue</a>
-            <a href="#">Accessoires</a>
+        <!-- Menu vertical-->
+        <div class="col-2">
+            <div class="vertical-menu">
+                <ul>
+                    <li><a href="#" class="active link-light">Accueil </a></li>
+                    <li><a href="#" class="link-light">Débuter</a></li>
+                    <li><a href="#" class="link-light">Professionels</a></li>
+                    <li><a href="#" class="link-light">Loisirs</a></li>
+                    <li><a href="#" class="link-light">Sous-marin </a></li>
+                    <li><a href="#" class="link-light">Prise de vue</a></li>
+                    <li><a href="#" class="link-light">Accessoires</a></li>
+                </ul>
+            </div>
+
+            <!-- Module aside -->
+            <div class="col-10 module container">
+                <!-- #TODO class pour les strong(temporaires) à mettre en + grand-->
+                <p><strong>Expédition</strong>
+                    dans la journée</p>
+                <p><strong>Equipe
+                        joignable</strong>
+                    du lun. au ven.
+                    de 9h à 18h
+                </p>
+                <p><strong>Entrepôt
+                        en France</strong>
+                    Stock en temps réel</p>
+
+                <p><strong>Newsletter</strong>
+                    Pour connaître
+                    les dernières
+                    nouveautés</p>
+            </div>
+        </div>
+
+        <div class="col-5">
+
+            <!-- Module Nouveautés  -->
+            <div id="carouselNovelties" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item container active">
+                        {#        {% for novelty in product %}
+                        <div class="col-12">
+                        <h1>Nouveautés</h1>
+                        <img src="https://via.placeholder.com/150" class="d-block w-50" alt="">
+                        </div>
+                        <div class="col-12">
+                        <p class="titre_mod"><strong>{{ novelty.productName }}</strong></p>
+                        <p>{{ novelty.description }}</p>
+                        <p>{{ novelty.dfPrice }}</p>
+                        <a class="btn btn-lg" href="">En savoir plus </a>
+                        </div>
+                    </div>
+                    {% endfor %}#}
+                        <div class="col-12">
+                            <h1>Nouveautés</h1>
+                            <img src="https://via.placeholder.com/150" class="d-block w-50" alt="">
+                            <p class="titre_mod"><strong>Nom produit 1</strong></p>
+                            <p>description</p>
+                            <p>prix</p>
+                            <a class="btn btn-lg" href="">En savoir plus </a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item container">
+                        <h1>Nouveautés</h1>
+                        <img src="https://via.placeholder.com/150" class="d-block w-50" alt="">
+                        <p class="titre_mod"><strong>Nom produit 2</strong></p>
+                        <p>description</p>
+                        <p>prix</p>
+                        <a class="btn btn-lg" href="">En savoir plus </a>
+                    </div>
+                    <div class="carousel-item container">
+                        <h1>Nouveautés</h1>
+                        <img src="https://via.placeholder.com/150" class="d-block w-50" alt="">
+                        <p class="titre_mod"><strong>Nom produit 3</strong></p>
+                        <p>description</p>
+                        <p>prix</p>
+                        <a class="btn btn-lg" href="">En savoir plus </a>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="carouselNovelties" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselNovelties" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
 
 
+
+            <!-- Présentation Skydrone-->
+            <div class="col-12">
+                <h1>Le projet Skydrone </h1>
+                <p> Découvrez tous les grands noms en matière de drone que nous avons sélectionnés spécialement pour
+                    vous.
+                    Quelles que soient vos préférences et vos habitudes en matière de drone, nous avons le produit qui
+                    vous
+                    correspond. Que vous soyez plutôt drones de prise de vue, drones sous marins ou drones de course,
+                    nous
+                    disposons d'un choix de marques et de produits important vous permettant de trouver LE produit qui
+                    correspond parfaitement à vos besoins et vos envies.
+
+                    Retrouvez nos marques phares en matière de drone telles que DJI, Yuneec, Parrot, Eachine et bien
+                    d'autres.
+
+                    Réalisez des prises de vues aériennes sublimes grâce à nos gammes spécialisées dans l'imagerie : DJI
+                    Inspire
+                    2, DJI Phantom 4 Pro+, Yuneec H520 ...
+
+                    Amusez-vous et apprenez à piloter de façon ludique grâce à notre gamme drones pour débutants. Le
+                    monde du
+                    drone s'offre à vous !</p>
+
+                <a href="{{ path('catalog') }}">Découvrez notre catalogue</a>
+            </div>
+        </div>
+
+        <div class="col-5">
+            <!-- Module Meilleures ventes -->
+            <div class="col-12 module container scroller">
+                <h1>Meilleures ventes</h1>
+
+                {% for product in products %}
+                <div class="row align-items-start">
+                    <div class="col-6">
+                        <img src="https://via.placeholder.com/150" alt="">
+                        <p class="titre_mod"><strong>{{ product.productName }}</strong></p>
+                        <p>{{ product.dfPrice }}</p>
+                    </div>
+                    <div class="col-6">
+                        <img src="https://via.placeholder.com/150" alt="">
+                        <p class="titre_mod"><strong>{{ product.productName }}</strong></p>
+                        <p>{{ product.dfPrice }}</p>
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+            </div>
         </div>
     </div>
+
+
 {% endblock %}

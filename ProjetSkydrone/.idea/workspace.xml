@@ -2,10 +2,195 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be4b87e4-3f99-4be2-b3bf-4ed89b21bf79" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.test" beforeDir="false" afterPath="$PROJECT_DIR$/.env.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ProjetSkydrone.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProjetSkydrone.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_15_06_2021_15_55.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_15_06_2021_15_55.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_16_06_2021_11_00.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_16_06_2021_11_00.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_17_06_2021_09_37.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_17_06_2021_09_37.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/skydrone.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/skydrone.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/console" beforeDir="false" afterPath="$PROJECT_DIR$/bin/console" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/phpunit" beforeDir="false" afterPath="$PROJECT_DIR$/bin/phpunit" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/cache.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/cache.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/dev/debug.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/dev/debug.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/dev/monolog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/dev/monolog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/mailer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/mailer.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/prod/deprecations.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/prod/deprecations.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/prod/monolog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/prod/monolog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/prod/routing.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/prod/routing.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/routing.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/routing.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/test/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/test/doctrine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/test/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/test/framework.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/test/monolog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/test/monolog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/test/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/test/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/test/validator.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/test/validator.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/test/web_profiler.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/test/web_profiler.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/validator.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/validator.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/preload.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/preload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes/annotations.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/annotations.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes/dev/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/dev/framework.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes/dev/web_profiler.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/dev/web_profiler.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210622122106.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20210622122106.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BillController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BillController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CatalogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CatalogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CustomersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CustomersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DeliveryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DeliveryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ExecutivesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ExecutivesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/OpinionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OpinionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/OrdersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OrdersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ResourcedepartementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ResourcedepartementController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SalesDepartmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SalesDepartmentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SuppliersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SuppliersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CatalogFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/CatalogFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/ContactFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/ContactFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Bill.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bill.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Customers.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Customers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/DeliveryForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/DeliveryForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/DoctrineMigrationVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/DoctrineMigrationVersions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Executives.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Executives.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Opinion.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Opinion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Orders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/ResourceDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ResourceDepartment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/SalesDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/SalesDepartment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Suppliers.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Suppliers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/BillType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/BillType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ContactType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ContactType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CustomersType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CustomersType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/DeliveryFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/DeliveryFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ExecutivesType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ExecutivesType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/OpinionType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/OpinionType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/OrdersType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/OrdersType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ProductType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProductType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ResourceDepartmentType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ResourceDepartmentType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/SalesDepartmentType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SalesDepartmentType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/SuppliersType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SuppliersType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/UsersType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UsersType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ContactRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ContactRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProductRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/Cart/CartService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Cart/CartService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bill/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bill/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bill/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bill/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bill/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bill/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bill/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bill/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bill/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bill/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bill/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bill/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/catalog/details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catalog/details.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/catalog/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catalog/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/catalog/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catalog/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customers/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customers/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customers/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customers/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customers/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customers/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/delivery/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delivery/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/delivery/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delivery/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/delivery/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delivery/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/delivery/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delivery/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/delivery/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delivery/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/delivery/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delivery/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/executives/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/executives/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/executives/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/executives/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/executives/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/executives/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/executives/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/executives/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/executives/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/executives/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/executives/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/executives/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/opinion/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/opinion/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/opinion/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/opinion/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/opinion/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/opinion/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/opinion/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/opinion/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/opinion/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/opinion/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/opinion/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/opinion/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/orders/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/orders/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/orders/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/orders/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/orders/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/orders/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/orders/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/orders/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/orders/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/orders/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/orders/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/orders/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/resourcedepartement/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/resourcedepartement/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/resourcedepartement/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/resourcedepartement/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/resourcedepartement/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/resourcedepartement/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/resourcedepartement/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/resourcedepartement/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/resourcedepartement/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/resourcedepartement/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/resourcedepartement/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/resourcedepartement/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sales_department/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sales_department/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sales_department/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sales_department/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sales_department/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sales_department/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sales_department/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sales_department/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sales_department/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sales_department/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sales_department/salespanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sales_department/salespanel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sales_department/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sales_department/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/registration.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/registration.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/suppliers/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/suppliers/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/suppliers/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/suppliers/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/suppliers/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/suppliers/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/suppliers/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/suppliers/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/suppliers/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/suppliers/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/suppliers/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/suppliers/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/translations/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TODO LIST" beforeDir="false" afterPath="$PROJECT_DIR$/../TODO LIST" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +200,7 @@
   <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
-      <interpreter composer="composer" />
+      <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="cf62c8b2-1d88-45a8-a55c-0cdc1a303480" />
     </execution>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -204,6 +389,7 @@
       <workItem from="1624351384360" duration="1026000" />
       <workItem from="1624445318374" duration="2432000" />
       <workItem from="1624461812723" duration="620000" />
+      <workItem from="1624472850699" duration="429000" />
     </task>
     <servers />
   </component>
