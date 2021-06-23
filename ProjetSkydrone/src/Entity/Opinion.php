@@ -71,11 +71,6 @@ class Opinion
         return $this->opinionId;
     }
 
-    public function getOpinionId(): ?int
-    {
-        return $this->opinionId;
-    }
-
     public function getTitle(): ?string
     {
         return $this->title;
