@@ -21,6 +21,7 @@ class Product
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private int $productId;
+    private ?int $productId = null;
 
     /**
      * @var string
