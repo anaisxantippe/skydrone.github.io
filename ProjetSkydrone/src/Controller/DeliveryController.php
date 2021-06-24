@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
+      * @IsGranted("ROLE_COMMERCIAL")
  * @Route("/delivery")
  */
 class DeliveryController extends AbstractController

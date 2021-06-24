@@ -70,19 +70,21 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/">Accueil</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Gestion des produits
+                       Catalogue
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="{{ path('catalog') }}">Consulter le catalogue</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
+                        {% if is_granted('ROLE_FOURNISSEUR') %}
                         <li><a class="dropdown-item" href="{{ path('product_new') }}">Ajouter un produit</a></li>
+                        {% endif %}
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -102,6 +104,7 @@
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </li>
+                {% if is_granted('ROLE_COMMERCIAL') %}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
@@ -119,10 +122,11 @@
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </li>
+                {% endif %}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Gestion des avis
+                        Commentaires
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Action</a></li>
@@ -137,7 +141,11 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Se connecter</a>
+                    {% if not app.user %}
+                    <a class="nav-link" href="{{ path('security_login')}}">Se connecter</a>
+                    {% else  %}
+                    <a class="nav-link" href="{{ path('security_logout')}}">Se déconnecter</a>
+                    {% endif %}
                 </li>
             </ul>
         </div>

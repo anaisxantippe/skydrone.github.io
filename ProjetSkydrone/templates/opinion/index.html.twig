@@ -22,7 +22,10 @@
                 <td>{{ opinion.description }}</td>
                 <td>
                     <a href="{{ path('opinion_show', {'opinionId': opinion.opinionId}) }}">show</a>
+                    {% if is_granted('ROLE_ADMIN') %}
                     <a href="{{ path('opinion_edit', {'opinionId': opinion.opinionId}) }}">edit</a>
+                    {% endif %}
+
                 </td>
             </tr>
         {% else %}
@@ -32,6 +35,9 @@
         {% endfor %}
         </tbody>
     </table>
-
+    {% if is_granted('ROLE_USER') %}
     <a href="{{ path('opinion_new') }}">Create new</a>
+    {% else %}
+    <p>Veuillez-vous connecter pour laisser un commentaire.</p>
+    {% endif %}
 {% endblock %}

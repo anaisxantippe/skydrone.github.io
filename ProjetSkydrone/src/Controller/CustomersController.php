@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Customers;
 use App\Form\CustomersType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -11,6 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("/customers")
+ * @IsGranted("ROLE_COMMERCIAL")
  */
 class CustomersController extends AbstractController
 {

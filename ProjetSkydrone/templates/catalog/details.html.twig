@@ -28,8 +28,10 @@
     </table>
 
     <a class="btn btn-success" href="{{ path('cart_add',{'id': product.productId}) }}">Ajouter au panier</a>
+    {% if is_granted('ROLE_FOURNISSEUR') %}
     <a class="btn btn-success" href="{{ path('product_edit',{'id': product.productId}) }}">Modifier</a>
     <a class="btn btn-danger" href="{{ path('product_delete',{'id': product.productId}) }}">Supprimer</a>
+    {% endif %}
 
 </div>
 {% endblock %}
