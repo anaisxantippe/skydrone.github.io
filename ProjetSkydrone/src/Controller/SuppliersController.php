@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- *@IsGranted("ROLE_FOURNISSEURS)
+ *@IsGranted("ROLE_FOURNISSEURS")
  * @Route("/suppliers")
  */
 class SuppliersController extends AbstractController

@@ -101,7 +101,7 @@ class CatalogController extends AbstractController
 
     /**
      * @Route("/details/delete/{id}", name="product_delete", methods={"GET","POST"}, requirements={"id":"\d+"})
-     * @ParamConverter("id", class="Product", options={"id": "id"})
+     * @ParamConverter("id", options={"id": "id"})
      */
     public function delete(Product $product, Request $request, EntityManagerInterface $manager, $id): Response
     {

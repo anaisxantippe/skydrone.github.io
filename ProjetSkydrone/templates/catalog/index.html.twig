@@ -21,7 +21,7 @@
             <td>{{ product.productName() }}</td>
             <td>{{ product.description }}</td>
             <td>{{ product.dfPrice }}</td>
-            <a href="{{ asset('uploads/brochures/' ~ product.picture) }}">View brochure (PDF)</a>
+            <td><img src="{{ asset('public/uploads/products/' ~ product.picture) }}" alt="Photo du produit {{ product.productId }}"/></td>
 
         </tr>
         {% endfor %}
