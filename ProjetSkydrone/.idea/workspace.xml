@@ -20,7 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be4b87e4-3f99-4be2-b3bf-4ed89b21bf79" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/salespanel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
+=======
+      <change beforePath="$PROJECT_DIR$/src/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sales_department/salespanel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sales_department/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sales_department/show.html.twig" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,6 +212,11 @@
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hanay\Documents\GitHub\skydrone.github.io\ProjetSkydrone\public" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -226,9 +240,14 @@
       <workItem from="1624351384360" duration="1026000" />
       <workItem from="1624445318374" duration="5733000" />
       <workItem from="1624528250838" duration="2008000" />
+<<<<<<< Updated upstream
       <workItem from="1624534450474" duration="727000" />
       <workItem from="1624537993774" duration="5919000" />
       <workItem from="1624606741047" duration="675000" />
+=======
+      <workItem from="1624534450474" duration="10246000" />
+      <workItem from="1624613137879" duration="592000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>

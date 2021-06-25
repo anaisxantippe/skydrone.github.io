@@ -21,7 +21,8 @@
             <td>{{ product.productName() }}</td>
             <td>{{ product.description }}</td>
             <td>{{ product.dfPrice }}</td>
-            <td>{{ product.picture }}</td>
+            <a href="{{ asset('uploads/brochures/' ~ product.picture) }}">View brochure (PDF)</a>
+
         </tr>
         {% endfor %}
         </tbody>
