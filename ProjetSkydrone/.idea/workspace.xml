@@ -20,23 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be4b87e4-3f99-4be2-b3bf-4ed89b21bf79" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/skydrone.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/skydrone.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/BillController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BillController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CustomersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CustomersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DeliveryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DeliveryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ExecutivesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ExecutivesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/OpinionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OpinionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/OrdersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OrdersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ResourcedepartementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ResourcedepartementController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SalesDepartmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SalesDepartmentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SuppliersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SuppliersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/catalog/details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catalog/details.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/opinion/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/opinion/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,6 +179,9 @@
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
     </include_path>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1uFcdyHukh5q9fo4FiSOZy5lJbA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -204,7 +191,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../skydrone functionnel/ProjetSkydrone" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -241,6 +228,7 @@
       <workItem from="1624528250838" duration="2008000" />
       <workItem from="1624534450474" duration="727000" />
       <workItem from="1624537993774" duration="5919000" />
+      <workItem from="1624606741047" duration="675000" />
     </task>
     <servers />
   </component>
