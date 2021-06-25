@@ -1,0 +1,56 @@
+html {
+    height: 100%;
+    width : 100%;
+}
+
+body {
+    background: linear-gradient(180deg, #612070 0%, #938FF3 56.25%, #0B114A 100%);
+    height: 100%;
+    width: 100%;
+}
+
+.row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#welcome {
+    color: white;
+}
+
+#info_container {
+    background: linear-gradient(180deg, #FD9452 2.6%, #FF319E 80.73%, #6E52A9 100%);
+    border-radius: 5%;
+    border: white 25px;
+}
+
+.info {
+    color: rgb(255, 255, 255);
+    margin-top: 5px;
+}
+
+.info_buttons {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#modif {
+    color: white;
+}
+
+#msgbox {
+    color: white;
+}
+
+#disconnect {
+    color: white;
+}
+
+.btn-synth {
+    background: linear-gradient(180deg, #FF4093 0%, rgba(232, 79, 146, 0) 100%);
+    color: white;
+    border-color: white;
+    width: 250px;
+    margin: 15px;
+}
+
