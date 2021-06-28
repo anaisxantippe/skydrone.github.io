@@ -1,0 +1,37 @@
+body {
+    background: linear-gradient(180deg, #612070 0%, #938FF3 56.25%, #0B114A 100%);
+    background-size: 400% 400% ;
+}
+h1, p, tr, th, a{
+    font-family: IBM Plex Mono;
+    color: white;
+}
+
+#skydrone {
+    font-family: IBM Plex Mono;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 62px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+
+}
+
+
+
+/*#menu {*/
+/*    position: absolute;*/
+/*    width: 76px;*/
+/*    height: 19px;*/
+/*    left: 55px;*/
+/*    top: 241px;*/
+/*    font-family: IBM Plex Mono;*/
+/*    font-style: normal;*/
+/*    font-weight: 500;*/
+/*    font-size: 18px;*/
+/*    line-height: 23px;*/
+/*    text-decoration-line: underline;*/
+/*    color: white;*/
+/*}*/
