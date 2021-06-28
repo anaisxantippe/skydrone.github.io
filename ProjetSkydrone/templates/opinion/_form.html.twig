@@ -1,13 +1,13 @@
-<div class="container">
+<div class="container-fluid">
     {{ form_start(form) }}
     <div class="form-group">{{ form_row(form.title) }}</div>
-
     <div class="form-group">{{ form_row(form.description) }}</div>
     <div class="form-group">{{ form_row(form.product) }}</div>
     <div class="form-group">{{ form_row(form.product) }}</div>
     <div class="form_group">{{ form_row(form.customer) }}</div>
-    <button class="btn btn-dark">{{ button_label|default('Save') }}
-        {{ form_end(form) }}
+    <br>
+    <button class=" btn btn-light">{{ button_label|default('Enregister') }}
+        {{ form_end(form) }} </button>
 </div>
 
 

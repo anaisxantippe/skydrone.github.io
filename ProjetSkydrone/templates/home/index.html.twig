@@ -13,80 +13,96 @@
             <div id="carouselNovelties" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item container active">
-                        {#        {% for novelty in product %}
-                        <div class="col-12">
                         <h1>Nouveautés</h1>
-                        <img src="https://via.placeholder.com/150" class="d-block w-50" alt="">
-                        </div>
-                        <div class="col-12">
-                        <p class="titre_mod"><strong>{{ novelty.productName }}</strong></p>
-                        <p>{{ novelty.description }}</p>
-                        <p>{{ novelty.dfPrice }}</p>
-                        <a class="btn btn-lg" href="">En savoir plus </a>
-                        </div>
-                    </div>
-                    {% endfor %}#}
-                        <div class="col-12">
-                            <h1>Nouveautés</h1>
-                            <img src="https://via.placeholder.com/150" class="d-block w-50" alt="">
-                            <p class="titre_mod"><strong>Nom produit 1</strong></p>
-                            <p>description</p>
-                            <p>prix</p>
-                            {#   <a class="btn btn-lg" href="{{ path('product_details',{'id': product.productId}) }}">En savoir plus </a>#}
+                        <div class="colonne">
+                            <div class="col-6">
+                                <img src="{{ asset('img/ryze.png') }}" class="img_novelty" alt="">
+                            </div>
+                            <div class="col-6">
+                                <p><strong>Ryze Tello - with DJI</strong></p>
+                                <p class="details">Le Ryze Tello (with DJI) est la nouvelle génération de
+                                    drones «
+                                    jouet » alliant à la fois le côté éducatif et le côté ludique !
+                                    Tello fait la taille de votre main. Il pèse seulement 85g et vous propose divers
+                                    modes de vol ainsi que des assistances de vol pour une sécurité accrue.</p>
+                                <p>109 euros</p>
+                                <a class="btn btn-lg details" href="{{ path('product_details',{'id': '2'}) }}">En
+                                    savoir plus </a>
+                            </div>
                         </div>
                     </div>
 
                     <div class="carousel-item container">
                         <h1>Nouveautés</h1>
-                        <img src="https://via.placeholder.com/150" class="d-block w-50" alt="">
-                        <p class="titre_mod"><strong>Nom produit 2</strong></p>
-                        <p>description</p>
-                        <p>prix</p>
-                        {# <a class="btn btn-lg" href="{{ path('product_details',{'id': product.productId}) }}">En savoir plus </a> #}
+                        <div class="colonne">
+                            <div class="col-6">
+                                <img src="{{ asset('img/newbeedrone.png') }}" class="img_novelty" alt="">
+                            </div>
+                            <div class="col-6 ">
+                                <p><strong>Drone AcroBee65 BeeBrainBL BNF - NewBeeDrone</strong></p>
+                                <p class="details">Newbee vous propose son dernier tinywhoop AcroBee65 ! On retrouve un
+                                    micro
+                                    drone FPV performant et fun pour débuter votre apprentissage !
+                                    Equipé de moteurs brushless, il est rapide et parfaitement stable en vol, que ce
+                                    soit en
+                                    intérieur comme en extérieur.</p>
+                                <p>159 euros</p>
+                                <a class="btn btn-lg details" href="{{ path('product_details',{'id': '5'}) }}">En savoir
+                                    plus </a>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="carousel-item container">
                         <h1>Nouveautés</h1>
-                        <img src="https://via.placeholder.com/150" class="d-block w-50" alt="">
-                        <p class="titre_mod"><strong>Nom produit 3</strong></p>
-                        <p>description</p>
-                        <p>prix</p>
-                        {# <a class="btn btn-lg" href="{{ path('product_details',{'id': product.productId}) }}">En savoir plus </a> #}
+                        <div class="colonne">
+                            <div class="col-6">
+                                <img src="{{ asset('img/bundle.png') }}" class="img_novelty" alt="">
+                            </div>
+                            <div class="col-6">
+                                <p><strong>Bundle AcroBee RTF - NewBeeDrone</strong></p>
+                                <p class="details">Le pack se compose d'un nano-drone puissant, résistant et rapide, de
+                                    sa
+                                    radiocommande de contrôle, de 4 batteries avec chargeur et d'un casque FPV pour une
+                                    immersion totale. C'est tout simplement le kit parfait pour débuter dans la pratique
+                                    du FPV et/ou pour les enfants !</p>
+                                <p>219 euros</p>
+                                <a class="btn btn-lg details" href="{{ path('product_details',{'id': '4'}) }}">En savoir
+                                    plus </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="carouselNovelties" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselNovelties"
+                        data-bs-slide="prev">
+                    <i class="bi bi-arrow-left-circle position-absolute bottom-0 end-20" aria-hidden="true"></i>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselNovelties" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselNovelties"
+                        data-bs-slide="next">
+                    <i class="bi bi-arrow-right-circle position-absolute bottom-0 end-20" aria-hidden="true"></i>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-
 
 
             <!-- Présentation Skydrone-->
             <div class="col-12">
                 <h1>Le projet Skydrone </h1>
                 <p> Découvrez tous les grands noms en matière de drone que nous avons sélectionnés spécialement pour
-                    vous.
-                    Quelles que soient vos préférences et vos habitudes en matière de drone, nous avons le produit qui
-                    vous
-                    correspond. Que vous soyez plutôt drones de prise de vue, drones sous marins ou drones de course,
-                    nous
-                    disposons d'un choix de marques et de produits important vous permettant de trouver LE produit qui
-                    correspond parfaitement à vos besoins et vos envies.
+                    vous. Quelles que soient vos préférences et vos habitudes en matière de drone, nous avons le produit
+                    qui vous correspond. Que vous soyez plutôt drones de prise de vue, drones sous marins ou drones de
+                    course, nous disposons d'un choix de marques et de produits important vous permettant de trouver LE produit
+                    qui correspond parfaitement à vos besoins et vos envies.
 
                     Retrouvez nos marques phares en matière de drone telles que DJI, Yuneec, Parrot, Eachine et bien
                     d'autres.
 
                     Réalisez des prises de vues aériennes sublimes grâce à nos gammes spécialisées dans l'imagerie : DJI
-                    Inspire
-                    2, DJI Phantom 4 Pro+, Yuneec H520 ...
+                    Inspire 2, DJI Phantom 4 Pro+, Yuneec H520 ...
 
                     Amusez-vous et apprenez à piloter de façon ludique grâce à notre gamme drones pour débutants. Le
-                    monde du
-                    drone s'offre à vous !</p>
+                    monde du drone s'offre à vous !</p>
 
                 <a href="{{ path('catalog') }}">Découvrez notre catalogue</a>
             </div>
@@ -94,27 +110,27 @@
 
         <div class="col-5">
             <!-- Module Meilleures ventes -->
-            <div class="col-12 module container scroller">
-                <h1>Meilleures ventes</h1>
-
-                {% for product in products %}
-                <div class="row align-items-start">
-                    <div class="col-6">
-                        <img src="https://via.placeholder.com/150" alt="">
-                        <p class="titre_mod"><strong>{{ product.productName }}</strong></p>
-                        <p>{{ product.dfPrice }}</p>
-                    </div>
-                    <div class="col-6">
-                        <img src="https://via.placeholder.com/150" alt="">
-                        <p class="titre_mod"><strong>{{ product.productName }}</strong></p>
-                        <p>{{ product.dfPrice }}</p>
-                    </div>
+            <div class="col-10 module container colonne_mod scroller">
+                <div class="row">
+                    <h1>Meilleures ventes</h1>
+                </div>
+                <div class="colonne_mod col-10">
+                    {% for product in products %}
+                        <div class="col-6">
+                            <img class="img-fluid thumb" id="productpicture"
+                                 src="{{ asset('/uploads/products/' ~ product.picture) }}"
+                                 alt="Photo du produit {{ product.productId }}"/>
+                            <p><strong>{{ product.productName }}</strong></p>
+                            <p>{{ product.dfPrice }} euros</p>
+                        </div>
                     {% endfor %}
-
                 </div>
 
             </div>
+            <!-- fin de la 2e colonne générale-->
         </div>
+        <!-- fin de la row principale-->
     </div>
+
 
 {% endblock %}

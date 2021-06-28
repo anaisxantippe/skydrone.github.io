@@ -17,6 +17,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 class CatalogController extends AbstractController
 {
@@ -51,6 +52,7 @@ class CatalogController extends AbstractController
     // UPDATE and CREATE
 
     /**
+     * @IsGranted("ROLE_COMMERCIAL")
      * @Route("/catalog/new",name="product_new")
      * @Route("/details/{id}/edit", name="product_edit")
      */
@@ -100,6 +102,7 @@ class CatalogController extends AbstractController
     //DELETE
 
     /**
+     * @IsGranted("ROLE_COMMERCIAL")
      * @Route("/details/delete/{id}", name="product_delete", methods={"GET","POST"}, requirements={"id":"\d+"})
      * @ParamConverter("id", options={"id": "id"})
      */
