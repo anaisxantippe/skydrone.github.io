@@ -95,8 +95,14 @@ class OpinionController extends AbstractController
         }
 
         return $this->redirectToRoute('opinion_index');
-    }
 
+    }
+    /**
+     * @Route ("/", name="opinion")
+     */
+    public function opinion () {
+        return $this->render('opinion/index.html.twig');
+    }
  //   public function getProduct() {
   //      $product = $this->loadModel('Product');
     //    $productList = $product->getAll();

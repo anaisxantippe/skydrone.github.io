@@ -3,9 +3,9 @@
 {% block title %}Nouvel avis{% endblock %}
 
 {% block body %}
-    <h1 class="col-12 d-flex justify-content-center">Ajouter un avis</h1>
-
-    {{ include('opinion/_form.html.twig') }}
-
+    <h1 class="d-flex justify-content-center">Ajouter un avis</h1>
+    <div class="col-6 d-flex justify-content-center">{{ include('opinion/_form.html.twig') }}</div>
+    <br>
     <a href="{{ path('opinion_index') }}">Retour à la liste</a>
+
 {% endblock %}
