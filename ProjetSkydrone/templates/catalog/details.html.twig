@@ -1,37 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Pour débuter{% endblock %}
+{% block title %}Détails{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <div class="row">
-            {% include 'base/aside.html.twig' %}
-            <div class="col-5">
-                <table class="table">
+    <div class="row">
+        {% include 'base/aside.html.twig' %}
+        <div class="col-10" id="products-container1">
+            <div class="col-6" id="products-container2">
+                <div class="col-3" id="products">
+                    <!--<button onclick="myFunction()">-->
+                    <a href="{{ path('product_details',{'id': product.productId}) }}"><img class="img-fluid rounded" id="productpicture" src="{{ asset('/uploads/products/' ~ product.picture) }}" alt="Photo du produit {{ product.productId }}"/></a>
+                    <!--</button>-->
+                </div>
+                    <p class="text-center">{{ product.productName() }}
+                    <br>
+                    <br>{{ product.dfPrice }} €
+                    <br>
+                    <br>{{ product.description }}
+                    </p>
+            </div>
+            <a class="btn btn-success" href="{{ path('cart_add',{'id': product.productId}) }}">Ajouter au panier</a>
+            <a class="btn btn-success" href="{{ path('product_edit',{'id': product.productId}) }}">Modifier</a>
+            <a class="btn btn-danger" href="{{ path('product_delete',{'id': product.productId}) }}">Supprimer</a>
+        </div>
+    </div>
 
-                    <thead>
-                    <tr>
-                        <th scope="col">ID du produit</th>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Prix HT</th>
-                        <th scope="col">Photo</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">{{ product.productId }}</th>
-                        <td>{{ product.productName() }}</td>
-                        <td>{{ product.description }}</td>
-                        <td>{{ product.dfPrice }}</td>
-                        <td>{{ product.picture }}</td>
-                    </tr>
-                    </tbody>
-                </table>
-
-                <a class="btn btn-success" href="{{ path('cart_add',{'id': product.productId}) }}">Ajouter au panier</a>
-                <a class="btn btn-success" href="{{ path('product_edit',{'id': product.productId}) }}">Modifier</a>
-                <a class="btn btn-danger" href="{{ path('product_delete',{'id': product.productId}) }}">Supprimer</a>
             </div>
         </div>
     </div>

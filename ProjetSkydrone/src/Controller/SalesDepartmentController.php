@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\SalesDepartment;
 use App\Form\SalesDepartmentType;
+use App\Repository\ContactRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -33,12 +34,16 @@ class SalesDepartmentController extends AbstractController
     /**
      * @Route("/new", name="sales_department_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, ContactRepository $contactRepository): Response
     {
         $salesDepartment = new SalesDepartment();
         $form = $this->createForm(SalesDepartmentType::class, $salesDepartment);
         $form->handleRequest($request);
 
+//$util = $contactRepository->findOneBy([
+//    'iduser'=>$request->get('')
+//])
+//    $salesdepart->setUser($util)
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($salesDepartment);
