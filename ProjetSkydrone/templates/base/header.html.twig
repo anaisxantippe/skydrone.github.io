@@ -1,0 +1,41 @@
+<header>
+    <div class="container header">
+        <div class="row">
+            <div class="col-10">
+                <h1><a href="{{path('home')}}" class="nostyle">Skydrone</a></h1>
+                <h5>Come with us if you want to fly</h5>
+            </div>
+            <div class="col-2 menu_session ">
+                <ul>
+                    <li><i class="bi bi-person-plus"></i><a href="" class="link-light"> Inscription</a></li>
+                    {% if not app.user %}
+                        <li>
+                            <i class="bi bi-person"></i><a href="{{ path('security_login')}}" class="link-light"> Connexion</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <i class="bi bi-x-lg"></i> <a class="nav-link" href="{{ path('security_logout')}}">Déconnexion</a>
+                        </li>
+                    {% endif %}
+                    <li><i class="bi bi-basket3"></i><a href="" class="link-light"> Panier</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Barre de recherche-->
+<div class="row">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container-fluid">
+            <div class="col-6">
+                <form class="d-flex">
+                    <i class="bi bi-search"></i>
+                    <input class="form-control me-2" type="search" placeholder="Search"
+                           aria-label="Rechercher un produit, une marque...">
+                    <button class="btn btn-outline-light" type="submit">Rechercher</button>
+                    <a href="#" class="link-light indent">Affiner</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+</div>

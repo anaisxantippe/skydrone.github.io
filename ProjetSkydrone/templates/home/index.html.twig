@@ -3,32 +3,118 @@
 {% block title %}SkyDrone{% endblock %}
 
 {% block body %}
+    <div class="row">
 
-    <
-    <div>
-    <h1>Le projet Skydrone </h1>
-    <p> Découvrez tous les grands noms en matière de drone que nous avons sélectionnés spécialement pour vous. Quelles que soient vos préférences et vos habitudes en matière de drone, nous avons le produit qui vous correspond. Que vous soyez plutôt drones de prise de vue, drones sous marins ou drones de course, nous disposons d'un choix de marques et de produits important vous permettant de trouver LE produit qui correspond parfaitement à vos besoins et vos envies.
+        {% include 'base/aside.html.twig' %}
 
-    Retrouvez nos marques phares en matière de drone telles que DJI, Yuneec, Parrot, Eachine et bien d'autres.
+        <div class="col-5">
 
-    Réalisez des prises de vues aériennes sublimes grâce à nos gammes spécialisées dans l'imagerie : DJI Inspire 2, DJI Phantom 4 Pro+, Yuneec H520 ...
+            <!-- Module Nouveautés  -->
+            <div id="carouselNovelties" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item container active">
+                        {#        {% for novelty in product %}
+                        <div class="col-12">
+                        <h1>Nouveautés</h1>
+                        <img src="https://via.placeholder.com/150" class="d-block w-50" alt="">
+                        </div>
+                        <div class="col-12">
+                        <p class="titre_mod"><strong>{{ novelty.productName }}</strong></p>
+                        <p>{{ novelty.description }}</p>
+                        <p>{{ novelty.dfPrice }}</p>
+                        <a class="btn btn-lg" href="">En savoir plus </a>
+                        </div>
+                    </div>
+                    {% endfor %}#}
+                        <div class="col-12">
+                            <h1>Nouveautés</h1>
+                            <img src="https://via.placeholder.com/150" class="d-block w-50" alt="">
+                            <p class="titre_mod"><strong>Nom produit 1</strong></p>
+                            <p>description</p>
+                            <p>prix</p>
+                            {#   <a class="btn btn-lg" href="{{ path('product_details',{'id': product.productId}) }}">En savoir plus </a>#}
+                        </div>
+                    </div>
 
-    Amusez-vous et apprenez à piloter de façon ludique grâce à notre gamme drones pour débutants. Le monde du drone s'offre à vous !</p>
+                    <div class="carousel-item container">
+                        <h1>Nouveautés</h1>
+                        <img src="https://via.placeholder.com/150" class="d-block w-50" alt="">
+                        <p class="titre_mod"><strong>Nom produit 2</strong></p>
+                        <p>description</p>
+                        <p>prix</p>
+                        {# <a class="btn btn-lg" href="{{ path('product_details',{'id': product.productId}) }}">En savoir plus </a> #}
+                    </div>
+                    <div class="carousel-item container">
+                        <h1>Nouveautés</h1>
+                        <img src="https://via.placeholder.com/150" class="d-block w-50" alt="">
+                        <p class="titre_mod"><strong>Nom produit 3</strong></p>
+                        <p>description</p>
+                        <p>prix</p>
+                        {# <a class="btn btn-lg" href="{{ path('product_details',{'id': product.productId}) }}">En savoir plus </a> #}
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="carouselNovelties" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselNovelties" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
 
-    </div>
-
-    <div>
-
-        <div class="vertical-menu">
-            <a href="#" class="active">Accueil </a>
-            <a href="#">Débuter</a>
-            <a href="#">Professionels</a>
-            <a href="#">Loisirs</a>
-            <a href="#">Sous-marin </a>
-            <a href="#">Prise de vue</a>
-            <a href="#">Accessoires</a>
 
 
+            <!-- Présentation Skydrone-->
+            <div class="col-12">
+                <h1>Le projet Skydrone </h1>
+                <p> Découvrez tous les grands noms en matière de drone que nous avons sélectionnés spécialement pour
+                    vous.
+                    Quelles que soient vos préférences et vos habitudes en matière de drone, nous avons le produit qui
+                    vous
+                    correspond. Que vous soyez plutôt drones de prise de vue, drones sous marins ou drones de course,
+                    nous
+                    disposons d'un choix de marques et de produits important vous permettant de trouver LE produit qui
+                    correspond parfaitement à vos besoins et vos envies.
+
+                    Retrouvez nos marques phares en matière de drone telles que DJI, Yuneec, Parrot, Eachine et bien
+                    d'autres.
+
+                    Réalisez des prises de vues aériennes sublimes grâce à nos gammes spécialisées dans l'imagerie : DJI
+                    Inspire
+                    2, DJI Phantom 4 Pro+, Yuneec H520 ...
+
+                    Amusez-vous et apprenez à piloter de façon ludique grâce à notre gamme drones pour débutants. Le
+                    monde du
+                    drone s'offre à vous !</p>
+
+                <a href="{{ path('catalog') }}">Découvrez notre catalogue</a>
+            </div>
+        </div>
+
+        <div class="col-5">
+            <!-- Module Meilleures ventes -->
+            <div class="col-12 module container scroller">
+                <h1>Meilleures ventes</h1>
+
+                {% for product in products %}
+                <div class="row align-items-start">
+                    <div class="col-6">
+                        <img src="https://via.placeholder.com/150" alt="">
+                        <p class="titre_mod"><strong>{{ product.productName }}</strong></p>
+                        <p>{{ product.dfPrice }}</p>
+                    </div>
+                    <div class="col-6">
+                        <img src="https://via.placeholder.com/150" alt="">
+                        <p class="titre_mod"><strong>{{ product.productName }}</strong></p>
+                        <p>{{ product.dfPrice }}</p>
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+            </div>
         </div>
     </div>
+
 {% endblock %}

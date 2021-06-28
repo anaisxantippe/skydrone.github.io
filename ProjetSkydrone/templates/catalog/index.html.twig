@@ -21,7 +21,8 @@
             <td>{{ product.productName() }}</td>
             <td>{{ product.description }}</td>
             <td>{{ product.dfPrice }}</td>
-            <td>{{ product.picture }}</td>
+            <td><img class="img-fluid rounded" id="productpicture" src="{{ asset('/uploads/products/' ~ product.picture) }}" alt="Photo du produit {{ product.productId }}"/></td>
+
         </tr>
         {% endfor %}
         </tbody>

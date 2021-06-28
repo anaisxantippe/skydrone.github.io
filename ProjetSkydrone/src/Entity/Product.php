@@ -20,7 +20,8 @@ class Product
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private int $productId;
+
+    private ?int $productId = null;
 
     /**
      * @var string
@@ -65,14 +66,9 @@ class Product
      * @var string
      *
      * @ORM\Column(name="picture", type="string", length=250, nullable=false)
-     * @Assert\Length(min=5, max=255, minMessage="Le nom du fichier doit comporter au moins 5 caractères !", maxMessage="Vous ne pouvez pas télécharger un fichier dont le nom fait plus de 255 caractères !")
-     * @Assert\Regex(
-     *     pattern="/([A-Za-zéèêëùüàäâïî0-9_-])/",
-     *     match=true,
-     *     message="Les seuls caractères spéciaux acceptés sont '-' et '_' !"
-     * )
      */
     private string $picture;
+
 
     /**
      * @var \Suppliers
@@ -131,12 +127,13 @@ class Product
         return $this;
     }
 
+
     public function getPicture(): ?string
     {
         return $this->picture;
     }
 
-    public function setPicture(string $picture): self
+    public function setPicture($picture): self
     {
         $this->picture = $picture;
 

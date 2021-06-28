@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Users;
 use App\Form\UsersType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -11,6 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 /**
+ * @IsGranted("ROLE_COMMERCIAL")
  * @Route("/users")
  */
 class UsersController extends AbstractController
@@ -55,13 +57,13 @@ class UsersController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
-    /**
-     * @Route("/connexion", name="security_login")
-     */
-    public function login(): Response
-    {
-        return $this->render('security/login.html.twig');
-    }
+//    /**
+//     * @Route("/connexion", name="security_login")
+//     */
+//    public function login(): Response
+//    {
+//        return $this->render('security/login.html.twig');
+//    }
 
     /**
      * @Route("/{userId}", name="users_show", methods={"GET"})

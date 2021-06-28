@@ -161,9 +161,16 @@ class Users implements UserInterface
         // TODO: Implement getSalt() method.
     }
 
-    public function getRoles(): array
-    {
-        return array('ROLE_USER');
+    public function getRoles()
+    { if ($this->role == "admin")
+        return ["ROLE_ADMIN"];
+        if ($this->role == "client")
+            return ["ROLE_USER"];
+        if ($this->role == "commercial")
+            return ["ROLE_COMMERCIAL"];
+        if ($this->role == "fournisseur")
+            return ["ROLE_FOURNISSEUR"];
+        return [];
     }
     public function __toString(){
         return $this->username;

@@ -26,7 +26,7 @@ class Opinion
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=50, nullable=false)
-     * @Assert\Length(min=3, max=50, minMessage="Le titre doit comporter au moins 3 caractères ")
+     * @Assert\Length(min=3, max=10, minMessage="Le titre doit comporter au moins 3 caractères ")
      * @Assert\Regex (
      *    pattern="/([A-Za-zéèêëùüàäâïî0-9.,!-?])/",
      *     match=true,
@@ -70,7 +70,6 @@ class Opinion
     {
         return $this->opinionId;
     }
-
 
     public function getTitle(): ?string
     {
