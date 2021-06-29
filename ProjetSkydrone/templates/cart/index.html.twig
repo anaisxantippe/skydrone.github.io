@@ -31,6 +31,7 @@
                 <td>{{ item.quantity }}</td>
                 <td>{{ item.product.dfPrice * item.quantity }}</td>
                 <td><a href="{{ path('cart_remove', {'id' : item.product.productId}) }}" class="btn btn-danger"><i class="bi bi-trash"></i></a></td>
+                <td><a href="{{ path('cart_test') }}" class="btn btn-danger">Valider </a></td>
             </tr>
             {% endfor %}
             </tbody>

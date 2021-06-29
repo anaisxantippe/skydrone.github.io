@@ -51,6 +51,7 @@ class SalesDepartment
     public function setLastname(string $lastname): self
     {
         $this->lastname = $lastname;
+        return $this;
     }
 
     /**
@@ -74,6 +75,7 @@ class SalesDepartment
     public function setFirstname(string $firstname): self
     {
         $this->firstname = $firstname;
+        return $this;
     }
 
     /**
@@ -97,6 +99,7 @@ class SalesDepartment
     public function setAdress(string $adress): self
     {
         $this->adress = $adress;
+        return $this;
     }
 
     /**
@@ -120,6 +123,7 @@ class SalesDepartment
     public function setZipCode(string $zipCode): self
     {
         $this->zipCode = $zipCode;
+        return $this;
     }
 
     /**
@@ -143,6 +147,7 @@ class SalesDepartment
     public function setCity(string $city): self
     {
         $this->city = $city;
+        return $this;
     }
 
     /**
@@ -167,6 +172,7 @@ class SalesDepartment
     public function setBirthdate(?DateTime $birthdate): self
     {
         $this->birthdate = $birthdate;
+        return $this;
     }
 
     /**
@@ -190,6 +196,7 @@ class SalesDepartment
     public function setPhoneNumber(string $phoneNumber): self
     {
         $this->phoneNumber = $phoneNumber;
+        return $this;
     }
 
     /**

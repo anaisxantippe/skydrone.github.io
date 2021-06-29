@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CatalogController!{% endblock %}
+
+{% block body %}
+
+    <h1>Votre Commande </h1>
+
+    {% if items | length > 0 %}
+
+        {% for item in items %}
+            <div class="card">
+                <img src={{ item.product.picture }} alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>{{ item.product.productName }}</b></h4>
+                    <h4>{{ item.product.description }}</h4>
+                    <label>Prix unitaire : </label><h4>{{ item.product.dfPrice }}</h4>
+                    <label>Quantité :</label><h4>{{ item.quantity }}</h4>
+                    <label>Prix total : </label><h4>{{ item.product.dfPrice * item.quantity }}</h4>
+                </div>
+            </div>
+            <a href="{{ path('cart_remove', {'id' : item.product.productId}) }}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+            <a href="{{ path('cart_test') }}" class="btn btn-danger">Valider votre commande </a>
+            <p>{{ customer.deliveryAdress }}</p>
+        {% endfor %}
+
+
+        </table>
+    {% else %}
+        <p>Votre panier est vide :'(</p>
+    {% endif %}
+{% endblock %}
