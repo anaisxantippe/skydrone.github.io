@@ -50,8 +50,8 @@ class Users implements UserInterface
      * @Assert\NotBlank
      * @Assert\Length(min=6, max=20, minMessage="Doit faire entre 8 et 15 caractères, avec majuscule, minuscule, chiffre et caractère spécial")
      * @Assert\Regex (
-     *     pattern      ="^(?=.[A-Za-z])(?=.\d)[A-Za-z\d]{8,}$^",
-     *     htmlPattern  ="^(?=.[A-Za-z])(?=.\d)[A-Za-z\d]{8,}$^",
+     *     pattern      ="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$^",
+     *     htmlPattern  ="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$^"
      *)
      */
     private $password;
