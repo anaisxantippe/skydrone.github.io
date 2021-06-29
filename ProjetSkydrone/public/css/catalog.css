@@ -37,3 +37,31 @@ button {
     margin-top: 20px;
 
 }
+
+#products {
+    width: 100%;
+}
+
+#productPicture {
+    display: block;
+    margin-left: 445px;
+    width: 300px;
+}
+
+#detailsBtn {
+    display: block;
+    margin-left: 370px;
+    margin-top: 100px;
+}
+
+#detailsBtn>.btn {
+    color: white;
+    border-color: white;
+    margin-right: 20px;
+}
+
+#products-container3>p {
+    display: block;
+    margin-right: 350px;
+    margin-top: 20px;
+}

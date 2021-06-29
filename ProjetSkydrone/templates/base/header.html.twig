@@ -7,7 +7,7 @@
             </div>
             <div class="col-2 menu_session ">
                 <ul>
-                    <li><i class="bi bi-person-plus"></i><a href="" class="link-light"> Inscription</a></li>
+                    <li><i class="bi bi-person-plus"></i><a href="{{ path('security_registration')}}" class="link-light"> Inscription</a></li>
                     {% if not app.user %}
                         <li>
                             <i class="bi bi-person"></i><a href="{{ path('security_login')}}" class="link-light"> Connexion</a>
@@ -17,7 +17,7 @@
                             <i class="bi bi-x-lg"></i> <a class="nav-link" href="{{ path('security_logout')}}">Déconnexion</a>
                         </li>
                     {% endif %}
-                    <li><i class="bi bi-basket3"></i><a href="" class="link-light"> Panier</a></li>
+                    <li><i class="bi bi-basket3"></i><a href="{{ path('cart')}}" class="link-light"> Panier</a></li>
                 </ul>
             </div>
         </div>

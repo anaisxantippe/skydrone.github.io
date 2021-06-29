@@ -11,17 +11,20 @@
                 <div class="col-3" id="products">
 
                     <!--<button onclick="myFunction()">-->
-                    <a href="{{ path('product_details',{'id': product.productId}) }}"><img class="img-fluid rounded" id="productpicture" src="{{ asset('/uploads/products/' ~ product.picture) }}" alt="Photo du produit {{ product.productId }}"/></a>
+                    <a href="{{ path('product_details',{'id': product.productId}) }}">
+                        <img class="img-fluid rounded" id="productpicture"
+                             src="{{ asset('/uploads/products/' ~ product.picture) }}"
+                             alt="Photo du produit {{ product.productId }}"/></a>
                         <!--</button>-->
-                    <p class="text-center">{{ product.productName() }}
+                    <p>{{ product.productName() }}
                     <br>{{ product.dfPrice }} €</p>
 
                 </div>
                 {% endfor %}
             </div>
-            <div class="col-4" id="myDIV">
+            <!--<div class="col-4" id="myDIV">
                 {{ path('product_details',{'id': 1}) }}
-            </div>
+            </div>-->
         </div>
     </div>
 {% endblock %}
