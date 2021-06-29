@@ -3,42 +3,39 @@
 {% block title %}Ajout d'un produit{% endblock %}
 
 {% block body %}
+    <div class="container">
+        <div class="row">
+            {% include 'base/aside.html.twig' %}
+            <div class="col-5">
 
-    {{ form_start(formProduct) }}
+                {{ form_start(formProduct) }}
 
-    <div class="form-control">
-        {{ form_label(formProduct.productName, 'Nom', {'attr' : {'placeholder' : "Nom du produit"}}) }}
-        {{ form_widget(formProduct.productName, {'attr' : {'class' : 'form-control'}}) }}
+                    {{ form_label(formProduct.productName, 'Nom', {'attr' : {'placeholder' : "Nom du produit"}}) }}
+                    {{ form_widget(formProduct.productName, {'attr' : {'class' : 'form-control'}}) }}
+
+                    {{ form_label(formProduct.description, 'Description', {'attr' : {'placeholder' : "Description du produit"}}) }}
+                    {{ form_widget(formProduct.description, {'attr' : {'class' : 'form-control'}}) }}
+
+                    {{ form_label(formProduct.dfPrice, 'Prix HT', {'attr' : {'placeholder' : "Prix Hors Taxes"}}) }}
+                    {{ form_widget(formProduct.dfPrice, {'attr' : {'class' : 'form-control'}}) }}
+
+                    <label for="">Photo</label>
+                    {{ form_widget(formProduct.picture) }}
+
+                    {{ form_label(formProduct.suppliers, 'ID du fournisseur', {'attr' : {'placeholder' : "ID du fournisseur"}}) }}
+                    {{ form_widget(formProduct.suppliers, {'attr' : {'class' : 'form-control'}}) }}
+
+                <button type="submit" class="btn btn-success">
+                    {% if editMode %}
+                    Modifier le produit
+                    {% else %}
+                    Ajouter le produit
+                    {% endif %}
+                </button>
+
+                {{ form_end(formProduct) }}
+
+            </div>
+        </div>
     </div>
-
-    <div class="form-control">
-        {{ form_label(formProduct.description, 'Description', {'attr' : {'placeholder' : "Description du produit"}}) }}
-        {{ form_widget(formProduct.description, {'attr' : {'class' : 'form-control'}}) }}
-    </div>
-
-    <div class="form-control">
-        {{ form_label(formProduct.dfPrice, 'Prix HT', {'attr' : {'placeholder' : "Prix Hors Taxes"}}) }}
-        {{ form_widget(formProduct.dfPrice, {'attr' : {'class' : 'form-control'}}) }}
-    </div>
-
-    <div class="form-control">
-        <label for="">Photo</label>
-        {{ form_widget(formProduct.picture) }}
-    </div>
-
-    <div class="form-control">
-        {{ form_label(formProduct.suppliers, 'ID du fournisseur', {'attr' : {'placeholder' : "ID du fournisseur"}}) }}
-        {{ form_widget(formProduct.suppliers, {'attr' : {'class' : 'form-control'}}) }}
-    </div>
-    <div class="form-control">
-    <button type="submit" class="btn btn-success">
-        {% if editMode %}
-        Modifier le produit
-        {% else %}
-        Ajouter le produit
-        {% endif %}
-    </button>
-    </div>
-    {{ form_end(formProduct) }}
-
 {% endblock %}
