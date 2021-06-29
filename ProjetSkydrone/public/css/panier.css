@@ -1,0 +1,12 @@
+#commande
+{
+   display: flex;
+   flex-direction: row;
+   background: linear-gradient(180deg, #FF4093 0%, rgba(232, 79, 146, 0) 100%);
+   border:none
+}
+#productpicture
+{
+   border:none
+
+}

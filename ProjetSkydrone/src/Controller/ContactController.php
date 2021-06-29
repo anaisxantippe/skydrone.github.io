@@ -91,5 +91,4 @@ class ContactController extends AbstractController
 
         return $this->redirectToRoute('contact_index');
     }
-
 }

@@ -11,12 +11,12 @@
 
             <thead>
             <tr>
-                <th scope="col">ID du produit</th>
+
                 <th scope="col">Photo</th>
                 <th scope="col">Nom du produit</th>
-                <th scope="col">Prix unitaire HT</th>
+                <th scope="col">Prix unitaire</th>
                 <th scope="col">Quantité</th>
-                <th scope="col">Prix total HT</th>
+                <th scope="col">Prix total</th>
                 <th scope="col"></th>
             </tr>
             </thead>
@@ -24,7 +24,7 @@
             <tbody>
             {% for item in items %}
             <tr>
-                <th scope="row">{{ item.product.productID }}</th>
+
                 <td><img class="img-fluid rounded" id="productpicture" src="{{ asset('/uploads/products/' ~ item.product.picture) }}" alt="Photo du produit {{ product.productId }}"/></td>
                 <td>{{ item.product.productName }}</td>
                 <td>{{ item.product.dfPrice }}</td>

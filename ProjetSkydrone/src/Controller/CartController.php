@@ -87,9 +87,6 @@ class CartController extends AbstractController
                     ];
 
                 }
-
-
-
                 return $this->render('cart/confirmation.html.twig',[
                     'items'=>$panier
                 ]);

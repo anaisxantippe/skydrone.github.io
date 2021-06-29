@@ -6,28 +6,28 @@
     <div class="row">
         {% include 'base/aside.html.twig' %}
         <div class="col-10" id="products-container3">
-                <div class="col-10" id="products">
-                    <!--<button onclick="myFunction()">-->
-                    <img class="img-fluid rounded" id="productPicture"
-                         src="{{ asset('/uploads/products/' ~ product.picture) }}"
-                         alt="Photo du produit {{ product.productId }}"/>
-                    <!--</button>-->
-                </div>
-                    <p class="text-center" id="productsDetails">{{ product.productName() }}
-                    <br>
-                    <br>
-                    <br>{{ product.dfPrice }} €
-                    <br>
-                    <br>{{ product.description }}
-                    </p>
+            <div class="col-10" id="products">
+                <!--<button onclick="myFunction()">-->
+                <img class="img-fluid rounded" id="productPicture"
+                     src="{{ asset('/uploads/products/' ~ product.picture) }}"
+                     alt="Photo du produit {{ product.productId }}"/>
+                <!--</button>-->
+            </div>
+            <p class="text-center" id="productsDetails">{{ product.productName() }}
+                <br>
+                <br>
+                <br>{{ product.dfPrice }} €
+                <br>
+                <br>{{ product.description }}
+            </p>
             <div id="detailsBtn">
-            <a class="btn" href="{{ path('cart_add',{'id': product.productId}) }}">Ajouter au panier</a>
-            <a class="btn" href="{{ path('product_edit',{'id': product.productId}) }}">Modifier</a>
-            <a class="btn" href="{{ path('product_delete',{'id': product.productId}) }}">Supprimer</a>
+                <a class="btn" href="{{ path('cart_add',{'id': product.productId}) }}">Ajouter au panier</a>
+                <a class="btn" href="{{ path('product_edit',{'id': product.productId}) }}">Modifier</a>
+                <a class="btn" href="{{ path('product_delete',{'id': product.productId}) }}">Supprimer</a>
             </div>
         </div>
     </div>
-            </div>
-        </div>
+    </div>
+    </div>
     </div>
 {% endblock %}

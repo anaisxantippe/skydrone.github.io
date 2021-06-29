@@ -8,18 +8,18 @@
         <div class="col-10" id="products-container1">
             <div class="col-6" id="products-container2">
                 {% for product in products %}
-                <div class="col-3" id="products">
+                    <div class="col-3" id="products">
 
-                    <!--<button onclick="myFunction()">-->
-                    <a href="{{ path('product_details',{'id': product.productId}) }}">
-                        <img class="img-fluid rounded" id="productpicture"
-                             src="{{ asset('/uploads/products/' ~ product.picture) }}"
-                             alt="Photo du produit {{ product.productId }}"/></a>
+                        <!--<button onclick="myFunction()">-->
+                        <a href="{{ path('product_details',{'id': product.productId}) }}">
+                            <img class="img-fluid rounded" id="productpicture"
+                                 src="{{ asset('/uploads/products/' ~ product.picture) }}"
+                                 alt="Photo du produit {{ product.productId }}"/></a>
                         <!--</button>-->
-                    <p>{{ product.productName() }}
-                    <br>{{ product.dfPrice }} €</p>
+                        <p>{{ product.productName() }}
+                            <br>{{ product.dfPrice }} €</p>
 
-                </div>
+                    </div>
                 {% endfor %}
             </div>
             <!--<div class="col-4" id="myDIV">
