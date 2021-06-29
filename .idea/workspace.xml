@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d7a4672-df21-44a7-893f-02efb8bcc422" name="Default Changelist" comment="changements formulaires">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Users.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetSkydrone/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Controller/OpinionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Controller/OpinionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Opinion.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/src/Entity/Opinion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/opinion/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/opinion/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/opinion/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/opinion/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/opinion/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/opinion/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetSkydrone/templates/opinion/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetSkydrone/templates/opinion/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +158,8 @@
       <path value="$PROJECT_DIR$/ProjetSkydrone/vendor/symfony/phpunit-bridge" />
       <path value="$PROJECT_DIR$/ProjetSkydrone/vendor/symfony/dependency-injection" />
       <path value="$PROJECT_DIR$/ProjetSkydrone/vendor/symfony/web-server-bundle" />
+      <path value="$PROJECT_DIR$/ProjetSkydrone/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/ProjetSkydrone/vendor/doctrine/data-fixtures" />
     </include_path>
   </component>
   <component name="ProjectId" id="1u1jbZisaqfZ6EnliTWEhnJl5Sr" />
@@ -183,6 +192,7 @@
       <workItem from="1623921722090" duration="9619000" />
       <workItem from="1624114812731" duration="20000" />
       <workItem from="1624261826335" duration="5811000" />
+      <workItem from="1624533623993" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="Test premier commit branche users">
       <created>1624262111804</created>
