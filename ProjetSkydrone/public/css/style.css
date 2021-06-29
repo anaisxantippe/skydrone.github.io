@@ -1,6 +1,10 @@
 /* Général */
+html {
+    height: 100%;
+    background: linear-gradient(180deg, #612070 0%, #938FF3 56.25%, #0B114A 100%) fixed;
+}
+
 body {!important;
-    background: linear-gradient(180deg, #612070 0%, #938FF3 56.25%, #0B114A 100%);
     color: #f1f2f3;
     font-family: 'IBM Plex Mono', monospace;
 }

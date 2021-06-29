@@ -29,8 +29,8 @@ class CatalogController extends AbstractController
     public function index(): Response
     {
         $products = $this->getDoctrine()
-                         ->getRepository(Product::class)
-                         ->findAll();
+            ->getRepository(Product::class)
+            ->findAll();
         return $this->render('catalog/index.html.twig', [
             'controller_name' => 'CatalogController',
             'products' => $products
